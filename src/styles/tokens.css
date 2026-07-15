@@ -1,0 +1,164 @@
+/**
+ * Design tokens for the KREBIG design system.
+ * Raw values live as CSS custom properties on :root (with a dark-mode
+ * override block); the `@theme inline` block below exposes them to
+ * Tailwind so semantic utilities (e.g. `bg-primary`, `text-muted-foreground`,
+ * `rounded-card`, `shadow-dropdown`, `duration-base`) are generated from
+ * these tokens instead of raw hex/px values scattered through components.
+ */
+
+:root {
+  /* Surfaces */
+  --background: #ffffff;
+  --foreground: #171717;
+  --card: #ffffff;
+  --card-foreground: #171717;
+  --popover: #ffffff;
+  --popover-foreground: #171717;
+
+  /* Brand */
+  --primary: #4338ca;
+  --primary-foreground: #f8fafc;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #0f172a;
+  --accent: #eef2ff;
+  --accent-foreground: #3730a3;
+
+  /* Neutral / UI */
+  --muted: #f4f4f5;
+  --muted-foreground: #71717a;
+  --border: #e4e4e7;
+  --input: #e4e4e7;
+  --ring: #4338ca;
+
+  /* Feedback */
+  --destructive: #dc2626;
+  --destructive-foreground: #fef2f2;
+  --success: #16a34a;
+  --success-foreground: #f0fdf4;
+  --warning: #d97706;
+  --warning-foreground: #fffbeb;
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Shadow color (varied per-shadow via alpha in @theme below) */
+  --shadow-color: 220 3% 15%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+    --card: #111113;
+    --card-foreground: #ededed;
+    --popover: #111113;
+    --popover-foreground: #ededed;
+
+    --primary: #818cf8;
+    --primary-foreground: #0a0a0a;
+    --secondary: #1f1f23;
+    --secondary-foreground: #ededed;
+    --accent: #1e1b4b;
+    --accent-foreground: #c7d2fe;
+
+    --muted: #18181b;
+    --muted-foreground: #a1a1aa;
+    --border: #27272a;
+    --input: #27272a;
+    --ring: #818cf8;
+
+    --destructive: #f87171;
+    --destructive-foreground: #450a0a;
+    --success: #4ade80;
+    --success-foreground: #052e16;
+    --warning: #fbbf24;
+    --warning-foreground: #451a03;
+
+    --shadow-color: 0 0% 0%;
+  }
+}
+
+@theme inline {
+  /* Breakpoints — extend the default scale with a finer mobile-first step */
+  --breakpoint-xs: 30rem;
+
+  /* Color tokens */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  /* Fonts (set in layout via next/font CSS variables) */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Radius scale, derived from a single base token */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 12px);
+
+  /* Semantic radius aliases used by components */
+  --radius-button: var(--radius-md);
+  --radius-card: var(--radius-xl);
+  --radius-input: var(--radius-md);
+
+  /* Shadow (elevation) scale */
+  --shadow-xs: 0 1px 2px 0 hsl(var(--shadow-color) / 0.05);
+  --shadow-sm:
+    0 1px 3px 0 hsl(var(--shadow-color) / 0.1), 0 1px 2px -1px hsl(var(--shadow-color) / 0.1);
+  --shadow-md:
+    0 4px 6px -1px hsl(var(--shadow-color) / 0.1), 0 2px 4px -2px hsl(var(--shadow-color) / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px hsl(var(--shadow-color) / 0.1), 0 4px 6px -4px hsl(var(--shadow-color) / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px hsl(var(--shadow-color) / 0.1), 0 8px 10px -6px hsl(var(--shadow-color) / 0.1);
+
+  /* Semantic shadow aliases used by components */
+  --shadow-card: var(--shadow-sm);
+  --shadow-dropdown: var(--shadow-lg);
+  --shadow-modal: var(--shadow-xl);
+
+  /* Motion — durations */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* Motion — easings */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-emphasized: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Semantic spacing scale, layered on top of Tailwind's default numeric
+     spacing scale — used for consistent section rhythm and container gutters. */
+  --spacing-gutter: 1rem;
+  --spacing-section-sm: 2.5rem;
+  --spacing-section-md: 4rem;
+  --spacing-section-lg: 6rem;
+  --spacing-section-xl: 8rem;
+}
