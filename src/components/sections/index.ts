@@ -7,5 +7,7 @@ export * from "./divisions-icons";
 export * from "./industries";
 export * from "./industries-icons";
 export * from "./portfolio";
+export * from "./testimonials";
+export * from "./testimonials-icons";
 export * from "./services";
 export * from "./services-icons";
