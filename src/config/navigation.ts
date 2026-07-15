@@ -14,14 +14,19 @@ export interface SocialLink {
   href: string;
 }
 
-/**
- * Primary header navigation. Intentionally empty — this sprint ships the
- * design system only. Populate once real routes/pages exist.
- */
-export const primaryNav: NavItem[] = [];
+/** Primary header navigation. */
+export const primaryNav: NavItem[] = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Divisions", href: "/divisions" },
+  { label: "Industries", href: "/industries" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Contact", href: "/contact" },
+];
 
 /** Optional primary call-to-action rendered at the end of the header nav. */
-export const primaryNavCta: NavItem | null = null;
+export const primaryNavCta: NavItem | null = { label: "Book Strategy Call", href: "/contact" };
 
 /** Footer link columns. Intentionally empty until pages exist. */
 export const footerNav: FooterColumn[] = [];
