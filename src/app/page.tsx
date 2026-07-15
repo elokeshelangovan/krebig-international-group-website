@@ -3,6 +3,7 @@ import { About } from "@/components/sections/about";
 import { Divisions } from "@/components/sections/divisions";
 import { Industries } from "@/components/sections/industries";
 import { Portfolio } from "@/components/sections/portfolio";
+import { Testimonials } from "@/components/sections/testimonials";
 import { Services } from "@/components/sections/services";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Divisions />
       <Industries />
       <Portfolio />
+      <Testimonials />
       <Services />
     </>
   );
