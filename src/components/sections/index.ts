@@ -4,5 +4,7 @@ export * from "./about";
 export * from "./about-icons";
 export * from "./divisions";
 export * from "./divisions-icons";
+export * from "./industries";
+export * from "./industries-icons";
 export * from "./services";
 export * from "./services-icons";
