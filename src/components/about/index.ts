@@ -9,3 +9,8 @@ export * from "./business-philosophy";
 export * from "./core-values";
 export * from "./leadership-philosophy";
 export * from "./business-timeline";
+export * from "./presence-icons";
+export * from "./global-presence";
+export * from "./why-krebig";
+export * from "./business-outcomes";
+export * from "./final-cta";

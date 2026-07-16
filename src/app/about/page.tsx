@@ -11,6 +11,10 @@ import {
   CoreValues,
   LeadershipPhilosophy,
   BusinessTimeline,
+  GlobalPresence,
+  WhyKrebig,
+  BusinessOutcomes,
+  FinalCta,
 } from "@/components/about";
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +43,10 @@ export default function AboutPage() {
       <CoreValues />
       <LeadershipPhilosophy />
       <BusinessTimeline />
+      <GlobalPresence />
+      <WhyKrebig />
+      <BusinessOutcomes />
+      <FinalCta />
     </>
   );
 }
