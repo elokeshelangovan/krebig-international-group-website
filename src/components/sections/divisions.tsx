@@ -12,9 +12,7 @@ import {
   BroadcastIcon,
   FilmIcon,
   CodeIcon,
-  BriefcaseIcon,
   GraduationCapIcon,
-  GlobeIcon,
 } from "@/components/sections/divisions-icons";
 import type { IconProps } from "@/components/sections/services-icons";
 
@@ -55,24 +53,10 @@ const defaultDivisions: Division[] = [
     href: "/divisions/technologies",
   },
   {
-    icon: BriefcaseIcon,
-    name: "KREBIG Business Consulting",
-    description:
-      "Business strategy, company formation, market expansion and operational consulting.",
-    href: "/divisions/business-consulting",
-  },
-  {
     icon: GraduationCapIcon,
     name: "KREBIG Academy",
     description: "Professional education, AI training, marketing courses and executive learning.",
     href: "/divisions/academy",
-  },
-  {
-    icon: GlobeIcon,
-    name: "KREBIG Global Services",
-    description:
-      "Corporate support, PRO services, documentation, compliance and enterprise support.",
-    href: "/divisions/global-services",
   },
 ];
 
@@ -116,7 +100,7 @@ export function Divisions({
       </m.div>
 
       <m.div
-        className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-3 lg:gap-8"
+        className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:mt-16 lg:grid-cols-4 lg:gap-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}

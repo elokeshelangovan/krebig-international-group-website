@@ -74,7 +74,7 @@ const defaultRoles: OpenRole[] = [
   {
     title: "AI Automation Engineer",
     department: "Technology",
-    location: "Bengaluru, India",
+    location: "Chennai, India",
     employmentType: "Full-time",
     href: "/careers/ai-automation-engineer",
   },
