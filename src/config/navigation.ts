@@ -27,16 +27,17 @@ export interface SocialLink {
 /**
  * Primary header navigation. The site is currently a single homepage, so
  * these link to the in-page sections they correspond to (`id="about"`,
- * `id="services"`, etc. in src/components/sections) rather than separate
- * routes that don't exist yet.
+ * `id="how-we-partner"`, etc. in src/components/sections) rather than
+ * separate routes that don't exist yet.
  */
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/#services" },
+  { label: "How We Partner", href: "/#how-we-partner" },
   { label: "Divisions", href: "/#divisions" },
-  { label: "Industries", href: "/#industries" },
-  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Industry Solutions", href: "/#industries" },
+  { label: "Insights", href: "/#insights" },
+  { label: "Careers", href: "/#careers" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -58,7 +59,7 @@ export const footerNav: FooterColumn[] = [
     title: "How We Partner",
     links: [
       { label: "Launch", href: "/how-we-partner/launch" },
-      { label: "Grow", href: "/how-we-partner/grow" },
+      { label: "Growth", href: "/how-we-partner/growth" },
       { label: "Scale", href: "/how-we-partner/scale" },
       { label: "Enterprise", href: "/how-we-partner/enterprise" },
     ],
@@ -68,21 +69,21 @@ export const footerNav: FooterColumn[] = [
     links: [
       { label: "Digital Media", href: "/divisions/digital-media" },
       { label: "Studio", href: "/divisions/studio" },
-      { label: "Technologies", href: "/divisions/technologies" },
+      { label: "Technology", href: "/divisions/technology" },
       { label: "Academy", href: "/divisions/academy" },
     ],
   },
   {
     title: "Industries",
     links: [
-      { label: "Business Setup", href: "/industries/business-setup" },
       { label: "Real Estate", href: "/industries/real-estate" },
       { label: "Healthcare", href: "/industries/healthcare" },
-      { label: "Hospitality", href: "/industries/hospitality" },
       { label: "Construction", href: "/industries/construction" },
-      { label: "Retail", href: "/industries/retail" },
-      { label: "Technology", href: "/industries/technology" },
+      { label: "Hospitality", href: "/industries/hospitality" },
+      { label: "Retail & E-Commerce", href: "/industries/retail-ecommerce" },
+      { label: "Manufacturing", href: "/industries/manufacturing" },
       { label: "Education", href: "/industries/education" },
+      { label: "Finance", href: "/industries/finance" },
     ],
   },
 ];

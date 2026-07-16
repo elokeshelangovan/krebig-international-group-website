@@ -66,7 +66,7 @@ const defaultInfoItems: ContactInfoItem[] = [
 
 const defaultBusinessGoalOptions: BusinessGoalOption[] = [
   { value: "launch", label: "Launch" },
-  { value: "grow", label: "Grow" },
+  { value: "growth", label: "Growth" },
   { value: "scale", label: "Scale" },
   { value: "enterprise", label: "Enterprise" },
   { value: "other", label: "Other" },

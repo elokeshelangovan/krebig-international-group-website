@@ -13,5 +13,5 @@ export * from "./careers";
 export * from "./contact";
 export * from "./testimonials";
 export * from "./testimonials-icons";
-export * from "./services";
+export * from "./how-we-partner";
 export * from "./services-icons";

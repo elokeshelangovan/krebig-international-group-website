@@ -23,7 +23,7 @@ export interface HeroProps {
 }
 
 const defaultPrimaryCta: HeroCta = { label: "Book a Strategy Call", href: "/#contact" };
-const defaultSecondaryCta: HeroCta = { label: "Explore Our Services", href: "/#services" };
+const defaultSecondaryCta: HeroCta = { label: "Explore How We Partner", href: "/#how-we-partner" };
 
 export function Hero({
   eyebrow = "AI-Powered Business Growth Partner",

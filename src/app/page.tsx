@@ -8,7 +8,7 @@ import { Insights } from "@/components/sections/insights";
 import { Careers } from "@/components/sections/careers";
 import { Contact } from "@/components/sections/contact";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Services } from "@/components/sections/services";
+import { HowWePartner } from "@/components/sections/how-we-partner";
 import { siteConfig } from "@/config/site";
 import { breadcrumbSchema, jsonLdScriptProps } from "@/lib/seo/schema";
 
@@ -26,7 +26,7 @@ export default function Home() {
       <Careers />
       <Contact />
       <Testimonials />
-      <Services />
+      <HowWePartner />
     </>
   );
 }

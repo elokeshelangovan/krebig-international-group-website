@@ -47,10 +47,10 @@ const defaultDivisions: Division[] = [
   },
   {
     icon: CodeIcon,
-    name: "KREBIG Technologies",
+    name: "KREBIG Technology",
     description:
       "AI automation, software development, websites, SaaS platforms and digital transformation.",
-    href: "/divisions/technologies",
+    href: "/divisions/technology",
   },
   {
     icon: GraduationCapIcon,
@@ -69,7 +69,7 @@ export function Divisions({
       Multiple Specialized Companies.
     </>
   ),
-  description = "KREBIG International Group combines specialized companies under one strategic ecosystem—delivering growth, technology, creativity, consulting and global business solutions.",
+  description = "KREBIG International Group combines specialized companies under one strategic ecosystem—delivering marketing, creative, technology and education solutions as a single accountable growth partner.",
   divisions = defaultDivisions,
 }: DivisionsProps) {
   const shouldReduceMotion = useReducedMotion();
