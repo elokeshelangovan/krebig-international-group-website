@@ -160,6 +160,7 @@ export function Industries({
       >
         {industries.map((industry) => {
           const Icon = industry.icon;
+          const patternId = `industry-grid-${industry.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
           return (
             <m.div
               key={industry.name}
@@ -167,19 +168,32 @@ export function Industries({
               whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
-              <Card className="group hover:border-primary/30 hover:shadow-dropdown duration-base ease-standard relative h-full transition-[border-color,box-shadow]">
+              <Card className="group hover:border-primary/30 hover:shadow-dropdown duration-base ease-standard relative flex h-full flex-col overflow-hidden transition-[border-color,box-shadow]">
                 <Link
                   href={industry.href}
                   className="focus-visible:ring-ring rounded-card absolute inset-0 z-10 focus-visible:ring-2 focus-visible:outline-none"
                   aria-label={`Learn more about how KREBIG serves the ${industry.name} industry`}
                 />
-                <CardHeader>
-                  <span
+                <div className="from-primary/10 via-accent/60 to-background relative aspect-[16/10] w-full shrink-0 overflow-hidden bg-gradient-to-br">
+                  <svg
+                    className="text-border absolute inset-0 h-full w-full opacity-30"
                     aria-hidden="true"
-                    className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                   >
-                    <Icon className="size-6" />
-                  </span>
+                    <defs>
+                      <pattern id={patternId} width="18" height="18" patternUnits="userSpaceOnUse">
+                        <circle cx="1.5" cy="1.5" r="1.5" fill="currentColor" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+                  </svg>
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <Icon
+                      aria-hidden="true"
+                      className="text-primary duration-slow ease-standard size-10 transition-transform group-hover:scale-110"
+                    />
+                  </div>
+                </div>
+                <CardHeader>
                   <CardTitle className="text-base">{industry.name}</CardTitle>
                   <CardDescription className="text-sm leading-relaxed">
                     {industry.description}
