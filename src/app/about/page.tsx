@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
-import { AboutHero, QuickFacts } from "@/components/about";
+import {
+  AboutHero,
+  QuickFacts,
+  CoreValues,
+  LeadershipPhilosophy,
+  BusinessTimeline,
+} from "@/components/about";
 
 export const metadata: Metadata = buildMetadata({
   fullTitle: "About KREBIG International Group | AI-Powered Business Growth Partner",
@@ -24,6 +30,9 @@ export default function AboutPage() {
       />
       <AboutHero />
       <QuickFacts />
+      <CoreValues />
+      <LeadershipPhilosophy />
+      <BusinessTimeline />
     </>
   );
 }
