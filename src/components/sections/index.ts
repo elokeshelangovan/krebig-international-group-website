@@ -9,6 +9,7 @@ export * from "./industries-icons";
 export * from "./process";
 export * from "./portfolio";
 export * from "./insights";
+export * from "./careers";
 export * from "./testimonials";
 export * from "./testimonials-icons";
 export * from "./services";
