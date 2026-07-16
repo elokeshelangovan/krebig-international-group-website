@@ -81,7 +81,7 @@ export function GlobalPresence({
       </m.div>
 
       <m.div
-        className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:mt-16 lg:gap-8"
+        className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:mt-16 lg:gap-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
@@ -95,12 +95,13 @@ export function GlobalPresence({
               variants={fadeInUp}
               whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
+              className="group"
             >
               <Card className="hover:shadow-dropdown duration-base ease-standard flex h-full flex-col transition-shadow">
                 <CardHeader>
                   <span
                     aria-hidden="true"
-                    className="bg-accent text-accent-foreground mb-2 flex size-12 items-center justify-center rounded-xl"
+                    className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                   >
                     <Icon className="size-6" />
                   </span>

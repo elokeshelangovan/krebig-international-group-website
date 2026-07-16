@@ -6,7 +6,7 @@ import { m } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
-import { fadeInUp } from "@/lib/motion/variants";
+import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
 
 export interface FinalCtaProps {
   heading?: string;
@@ -38,15 +38,19 @@ export function FinalCta({
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
-        variants={fadeInUp}
+        variants={staggerContainer}
       >
-        <Heading level={2} className="text-primary-foreground">
-          {heading}
-        </Heading>
-        <Text variant="lead" className="text-primary-foreground/85 max-w-2xl text-pretty">
-          {description}
-        </Text>
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
+        <m.div variants={fadeInUp}>
+          <Heading level={2} className="text-primary-foreground">
+            {heading}
+          </Heading>
+        </m.div>
+        <m.div variants={fadeInUp}>
+          <Text variant="lead" className="text-primary-foreground/85 max-w-2xl text-pretty">
+            {description}
+          </Text>
+        </m.div>
+        <m.div variants={fadeInUp} className="flex flex-col items-center gap-4 sm:flex-row">
           <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
             <Link href={primaryCtaHref}>{primaryCtaLabel}</Link>
           </Button>
@@ -61,7 +65,7 @@ export function FinalCta({
               {secondaryCtaLabel}
             </Link>
           </Button>
-        </div>
+        </m.div>
       </m.div>
     </Section>
   );
