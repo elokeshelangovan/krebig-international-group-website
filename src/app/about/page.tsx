@@ -5,6 +5,9 @@ import { siteConfig } from "@/config/site";
 import {
   AboutHero,
   QuickFacts,
+  OurStory,
+  MissionVision,
+  BusinessPhilosophy,
   CoreValues,
   LeadershipPhilosophy,
   BusinessTimeline,
@@ -30,6 +33,9 @@ export default function AboutPage() {
       />
       <AboutHero />
       <QuickFacts />
+      <OurStory />
+      <MissionVision />
+      <BusinessPhilosophy />
       <CoreValues />
       <LeadershipPhilosophy />
       <BusinessTimeline />
