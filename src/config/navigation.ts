@@ -32,7 +32,7 @@ export interface SocialLink {
  */
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/#about" },
+  { label: "About", href: "/about" },
   { label: "Services", href: "/#services" },
   { label: "Divisions", href: "/#divisions" },
   { label: "Industries", href: "/#industries" },
@@ -48,7 +48,7 @@ export const footerNav: FooterColumn[] = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/#about" },
+      { label: "About", href: "/about" },
       { label: "Leadership", href: "/about/leadership" },
       { label: "Careers", href: "/#careers" },
       { label: "Contact", href: "/#contact" },
