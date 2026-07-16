@@ -4,7 +4,7 @@ import type { ComponentType } from "react";
 import { m, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Card } from "@/components/ui/card";
-import { Heading, Text } from "@/components/ui/typography";
+import { Heading } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
 import {
   TrendingUpIcon,
@@ -88,13 +88,13 @@ export function BusinessOutcomes({
               <Card className="hover:shadow-dropdown duration-base ease-standard flex h-full flex-col items-center gap-3 p-6 text-center transition-shadow">
                 <span
                   aria-hidden="true"
-                  className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
+                  className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                 >
                   <Icon className="size-6" />
                 </span>
-                <Text variant="small" className="text-foreground font-semibold">
+                <Heading level={3} className="text-sm font-semibold">
                   {outcome.label}
-                </Text>
+                </Heading>
               </Card>
             </m.div>
           );

@@ -10,6 +10,7 @@ import type { IconProps } from "@/components/sections/services-icons";
 
 export interface MissionVisionProps {
   eyebrow?: string;
+  heading?: string;
   missionHeading?: string;
   missionContent?: string;
   visionHeading?: string;
@@ -29,6 +30,7 @@ function IconPanel({ icon: Icon }: { icon: ComponentType<IconProps> }) {
 
 export function MissionVision({
   eyebrow = "Mission & Vision",
+  heading = "What We're Working Toward",
   missionHeading = "Our Mission",
   missionContent = "To become the trusted long-term growth partner for ambitious businesses by combining strategic thinking, creative execution, advanced technology and AI into measurable business outcomes.",
   visionHeading = "Our Vision",
@@ -55,6 +57,9 @@ export function MissionVision({
         >
           {eyebrow}
         </m.span>
+        <m.div variants={fadeInUp}>
+          <Heading level={2}>{heading}</Heading>
+        </m.div>
       </m.div>
 
       <m.div
