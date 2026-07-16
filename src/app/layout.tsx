@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import { buildMetadata } from "@/lib/seo/metadata";
+import { jsonLdScriptProps, organizationSchema, websiteSchema } from "@/lib/seo/schema";
 import { AppProviders } from "@/providers";
 import { SiteShell } from "@/components/layout/site-shell";
 import "./globals.css";
@@ -41,6 +42,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <script {...jsonLdScriptProps(organizationSchema())} />
+        <script {...jsonLdScriptProps(websiteSchema())} />
         <AppProviders>
           <SiteShell>{children}</SiteShell>
         </AppProviders>

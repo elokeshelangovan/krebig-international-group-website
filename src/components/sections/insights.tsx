@@ -122,7 +122,7 @@ export function Insights({
                 <CardHeader>
                   <span
                     aria-hidden="true"
-                    className="from-primary/15 to-accent text-primary duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl bg-gradient-to-br transition-transform group-hover:scale-110 group-hover:-rotate-3"
+                    className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                   >
                     <Icon className="size-6" strokeWidth={1.75} />
                   </span>

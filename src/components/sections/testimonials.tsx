@@ -204,7 +204,7 @@ export function Testimonials({
             <m.div
               key={indicator.label}
               variants={fadeInUp}
-              whileHover={shouldReduceMotion ? undefined : { y: -4 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
               className="group"
             >

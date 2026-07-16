@@ -31,9 +31,7 @@ export function AnnouncementBar({
           aria-hidden="true"
           animate={shouldReduceMotion ? undefined : { scale: [1, 1.15, 1] }}
           transition={
-            shouldReduceMotion
-              ? undefined
-              : { duration: 2.2, repeat: Infinity, ease: easing.standard }
+            shouldReduceMotion ? undefined : { duration: 2.2, repeat: 3, ease: easing.standard }
           }
         >
           {icon}

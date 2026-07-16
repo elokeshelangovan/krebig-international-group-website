@@ -24,29 +24,34 @@ export interface SocialLink {
   icon: ComponentType<SVGAttributes<SVGSVGElement>>;
 }
 
-/** Primary header navigation. */
+/**
+ * Primary header navigation. The site is currently a single homepage, so
+ * these link to the in-page sections they correspond to (`id="about"`,
+ * `id="services"`, etc. in src/components/sections) rather than separate
+ * routes that don't exist yet.
+ */
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Divisions", href: "/divisions" },
-  { label: "Industries", href: "/industries" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/#about" },
+  { label: "Services", href: "/#services" },
+  { label: "Divisions", href: "/#divisions" },
+  { label: "Industries", href: "/#industries" },
+  { label: "Portfolio", href: "/#portfolio" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 /** Optional primary call-to-action rendered at the end of the header nav. */
-export const primaryNavCta: NavItem | null = { label: "Book Strategy Call", href: "/contact" };
+export const primaryNavCta: NavItem | null = { label: "Book Strategy Call", href: "/#contact" };
 
 /** Footer link columns. */
 export const footerNav: FooterColumn[] = [
   {
     title: "Company",
     links: [
-      { label: "About", href: "/about" },
+      { label: "About", href: "/#about" },
       { label: "Leadership", href: "/about/leadership" },
-      { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/contact" },
+      { label: "Careers", href: "/#careers" },
+      { label: "Contact", href: "/#contact" },
     ],
   },
   {
