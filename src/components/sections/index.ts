@@ -1,5 +1,6 @@
 export * from "./hero";
 export * from "./hero-visual";
+export * from "./hero-background";
 export * from "./about";
 export * from "./about-icons";
 export * from "./divisions";
