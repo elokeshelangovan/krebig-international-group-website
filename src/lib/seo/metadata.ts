@@ -3,6 +3,8 @@ import { siteConfig } from "@/config/site";
 
 interface BuildMetadataOptions {
   title?: string;
+  /** Full literal `<title>` text, used verbatim instead of `${title} | ${siteConfig.name}`. */
+  fullTitle?: string;
   description?: string;
   path?: string;
   noIndex?: boolean;
@@ -10,15 +12,18 @@ interface BuildMetadataOptions {
 
 export function buildMetadata({
   title,
+  fullTitle,
   description = siteConfig.description,
   path = "/",
   noIndex = false,
 }: BuildMetadataOptions = {}): Metadata {
   const url = new URL(path, siteConfig.url).toString();
-  const pageTitle = title ? `${title} | ${siteConfig.name}` : siteConfig.name;
+  const pageTitle = fullTitle ?? (title ? `${title} | ${siteConfig.name}` : siteConfig.name);
 
   return {
-    title: pageTitle,
+    // A plain string title is still combined with the root layout's
+    // `template`; `absolute` is required to render `fullTitle` verbatim.
+    title: fullTitle ? { absolute: fullTitle } : pageTitle,
     description,
     alternates: {
       canonical: url,
