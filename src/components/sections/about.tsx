@@ -47,7 +47,7 @@ const defaultAiFirst: Pillar = {
 };
 
 const defaultStats: Stat[] = [
-  { value: "6", label: "Integrated Service Lines" },
+  { value: "4", label: "Specialized Divisions" },
   { value: "2", label: "Global Hubs — UAE & India" },
   { value: "100%", label: "AI-Augmented Delivery" },
   { value: "24/7", label: "Always-On Automation" },
