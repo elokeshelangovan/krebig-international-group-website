@@ -136,7 +136,7 @@ export function Portfolio({
             <m.div
               key={caseStudy.title}
               variants={fadeInUp}
-              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
             >
               <Card className="group hover:shadow-dropdown duration-base ease-standard flex h-full flex-col overflow-hidden transition-shadow">

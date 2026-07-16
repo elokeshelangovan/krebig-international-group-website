@@ -128,7 +128,7 @@ export function Divisions({
             <m.div
               key={division.name}
               variants={fadeInUp}
-              whileHover={shouldReduceMotion ? undefined : { y: -8 }}
+              whileHover={shouldReduceMotion ? undefined : { y: -6 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
               className="group"
             >

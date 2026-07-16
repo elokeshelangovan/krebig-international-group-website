@@ -9,10 +9,13 @@ import { Careers } from "@/components/sections/careers";
 import { Contact } from "@/components/sections/contact";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Services } from "@/components/sections/services";
+import { siteConfig } from "@/config/site";
+import { breadcrumbSchema, jsonLdScriptProps } from "@/lib/seo/schema";
 
 export default function Home() {
   return (
     <>
+      <script {...jsonLdScriptProps(breadcrumbSchema([{ name: "Home", url: siteConfig.url }]))} />
       <Hero />
       <About />
       <Divisions />

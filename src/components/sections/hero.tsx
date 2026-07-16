@@ -22,8 +22,8 @@ export interface HeroProps {
   secondaryCta?: HeroCta;
 }
 
-const defaultPrimaryCta: HeroCta = { label: "Book a Strategy Call", href: "/contact" };
-const defaultSecondaryCta: HeroCta = { label: "Explore Our Services", href: "/services" };
+const defaultPrimaryCta: HeroCta = { label: "Book a Strategy Call", href: "/#contact" };
+const defaultSecondaryCta: HeroCta = { label: "Explore Our Services", href: "/#services" };
 
 export function Hero({
   eyebrow = "AI-Powered Business Growth Partner",

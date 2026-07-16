@@ -178,7 +178,13 @@ export function Careers({
           </Heading>
         </m.div>
 
-        <m.div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <m.div
+          className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={staggerContainer}
+        >
           {roles.map((role) => (
             <m.div
               key={role.title}

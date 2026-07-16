@@ -122,7 +122,7 @@ export function Contact({
   bandHeading = "Ready to Engineer Your Business Growth?",
   bandDescription = "Partner with KREBIG to combine strategy, creativity, technology, and AI into one powerful growth engine.",
   bandPrimaryCtaLabel = "Book Your Strategy Call",
-  bandPrimaryCtaHref = "/contact/strategy-call",
+  bandPrimaryCtaHref = "/#contact",
   bandSecondaryCtaLabel = "Download Company Profile",
   bandSecondaryCtaHref = "/company-profile.pdf",
 }: ContactProps) {
@@ -174,9 +174,9 @@ export function Contact({
                 <div key={item.label} className="flex items-start gap-4">
                   <span
                     aria-hidden="true"
-                    className="bg-accent text-accent-foreground flex size-11 shrink-0 items-center justify-center rounded-xl"
+                    className="bg-accent text-accent-foreground flex size-12 shrink-0 items-center justify-center rounded-xl"
                   >
-                    <Icon className="size-5" strokeWidth={1.75} />
+                    <Icon className="size-6" strokeWidth={1.75} />
                   </span>
                   <div className="flex flex-col gap-1">
                     <Text variant="small" className="text-foreground font-semibold">
@@ -281,7 +281,7 @@ export function Contact({
           {bandDescription}
         </Text>
         <m.div variants={fadeInUp} className="flex flex-col items-center gap-4 sm:flex-row">
-          <Button asChild size="lg" variant="secondary">
+          <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
             <Link href={bandPrimaryCtaHref}>{bandPrimaryCtaLabel}</Link>
           </Button>
           <Button

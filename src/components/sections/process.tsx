@@ -103,9 +103,9 @@ export function Process({
   steps = defaultSteps,
   ctaHeading = "Ready to Start Your Growth Journey?",
   primaryCtaLabel = "Book a Strategy Call",
-  primaryCtaHref = "/contact",
+  primaryCtaHref = "/#contact",
   secondaryCtaLabel = "Explore Our Approach",
-  secondaryCtaHref = "/about",
+  secondaryCtaHref = "/#about",
 }: ProcessProps) {
   const shouldReduceMotion = useReducedMotion();
 

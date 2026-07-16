@@ -43,7 +43,7 @@ export function Footer({
   ctaHeading = "Ready To Build Something Bigger?",
   ctaDescription = "Partner with KREBIG International Group and transform your business through strategy, creativity, technology and AI.",
   ctaPrimaryLabel = "Book Strategy Call",
-  ctaPrimaryHref = "/contact/strategy-call",
+  ctaPrimaryHref = "/#contact",
   ctaSecondaryLabel = "Download Company Profile",
   ctaSecondaryHref = "/company-profile.pdf",
   className,

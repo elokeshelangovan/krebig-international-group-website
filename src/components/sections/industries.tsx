@@ -176,9 +176,9 @@ export function Industries({
                 <CardHeader>
                   <span
                     aria-hidden="true"
-                    className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-11 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
+                    className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                   >
-                    <Icon className="size-5" />
+                    <Icon className="size-6" />
                   </span>
                   <CardTitle className="text-base">{industry.name}</CardTitle>
                   <CardDescription className="text-sm leading-relaxed">
