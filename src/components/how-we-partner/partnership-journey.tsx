@@ -27,32 +27,32 @@ const defaultSteps: JourneyStep[] = [
   {
     number: "01",
     icon: Search,
-    title: "Discover",
-    description: "Understand your business, goals, market and growth opportunities.",
+    title: "Discovery",
+    description: "Understand your business, goals, challenges, market, and opportunities.",
   },
   {
     number: "02",
     icon: Map,
     title: "Strategy",
-    description: "Build a clear roadmap aligned to priorities, positioning and growth stage.",
+    description: "Develop a customized growth roadmap with measurable objectives.",
   },
   {
     number: "03",
     icon: Rocket,
     title: "Execution",
-    description: "Deliver strategy, creative, technology and AI-powered execution.",
+    description: "Implement marketing, technology, automation, and operational initiatives.",
   },
   {
     number: "04",
     icon: Gauge,
     title: "Optimization",
-    description: "Measure performance and continuously refine for better outcomes.",
+    description: "Measure performance, refine strategies, improve efficiency, and maximize ROI.",
   },
   {
     number: "05",
     icon: LineChart,
     title: "Scale",
-    description: "Expand what works into new markets, channels and capabilities.",
+    description: "Expand sustainably through continuous innovation and long-term partnership.",
   },
 ];
 
@@ -88,9 +88,9 @@ function StepMarker({ number }: { number: string }) {
 }
 
 export function PartnershipJourney({
-  eyebrow = "Our Partnership Journey",
-  heading = "A Structured Path From Discovery to Scale",
-  description = "Every partnership follows a proven framework that turns strategy into measurable business outcomes.",
+  eyebrow = "Partnership Journey",
+  heading = "Our Partnership Journey",
+  description = "Every successful partnership follows a structured path. Our proven framework ensures every engagement is strategic, measurable, and focused on long-term business growth.",
   steps = defaultSteps,
 }: PartnershipJourneyProps) {
   const shouldReduceMotion = useReducedMotion();
