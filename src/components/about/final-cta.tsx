@@ -1,12 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { Download } from "lucide-react";
+import { Download, Mail } from "lucide-react";
 import { m } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
+
+const secondaryIcons = { download: Download, mail: Mail, none: null } as const;
 
 export interface FinalCtaProps {
   heading?: string;
@@ -15,6 +17,8 @@ export interface FinalCtaProps {
   primaryCtaHref?: string;
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
+  /** Icon rendered before the secondary CTA label. Defaults to "download"; pass "none" to omit. */
+  secondaryIcon?: keyof typeof secondaryIcons;
 }
 
 export function FinalCta({
@@ -24,7 +28,9 @@ export function FinalCta({
   primaryCtaHref = "/#contact",
   secondaryCtaLabel = "Download Company Profile",
   secondaryCtaHref = "/company-profile.pdf",
+  secondaryIcon = "download",
 }: FinalCtaProps) {
+  const SecondaryIcon = secondaryIcons[secondaryIcon];
   return (
     <Section
       id="final-cta"
@@ -61,7 +67,7 @@ export function FinalCta({
             className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
           >
             <Link href={secondaryCtaHref}>
-              <Download aria-hidden="true" className="size-4" />
+              {SecondaryIcon ? <SecondaryIcon aria-hidden="true" className="size-4" /> : null}
               {secondaryCtaLabel}
             </Link>
           </Button>
