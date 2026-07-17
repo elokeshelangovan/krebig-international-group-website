@@ -5,7 +5,7 @@ import { Rocket, TrendingUp, Layers, Building2, Check } from "lucide-react";
 import Link from "next/link";
 import { m, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/layout/section";
-import { Card, CardHeader, CardTitle, CardDescription, CardFooter } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
@@ -13,9 +13,8 @@ import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
 export interface PartnershipModelDetail {
   icon: LucideIcon;
   title: string;
-  description: string;
-  idealFor: string;
-  outcomes: string[];
+  perfectFor: string[];
+  focus: string[];
   ctaLabel: string;
   href: string;
 }
@@ -31,57 +30,69 @@ const defaultModels: PartnershipModelDetail[] = [
   {
     icon: Rocket,
     title: "Launch",
-    description: "For new ventures entering the market and building their foundation.",
-    idealFor: "Early-stage businesses and new market entrants",
-    outcomes: ["Brand and digital foundation", "Go-to-market strategy", "A fast, confident launch"],
-    ctaLabel: "Learn More",
+    perfectFor: ["Startups", "New businesses", "Early-stage companies"],
+    focus: [
+      "Brand Identity",
+      "Website",
+      "Digital Presence",
+      "Go-to-Market Strategy",
+      "Business Foundation",
+    ],
+    ctaLabel: "Start Your Journey",
     href: "/how-we-partner/launch",
   },
   {
     icon: TrendingUp,
     title: "Growth",
-    description: "For businesses ready to expand their reach and accelerate demand.",
-    idealFor: "Established businesses ready to scale marketing and demand",
-    outcomes: [
-      "Marketing engines that compound",
-      "Stronger lead generation",
-      "Measurable growth systems",
+    perfectFor: [
+      "Growing businesses",
+      "Companies generating consistent revenue",
+      "Businesses expanding into new markets",
     ],
-    ctaLabel: "Learn More",
+    focus: [
+      "Lead Generation",
+      "Performance Marketing",
+      "SEO",
+      "Content Strategy",
+      "Marketing Automation",
+    ],
+    ctaLabel: "Accelerate Growth",
     href: "/how-we-partner/growth",
   },
   {
     icon: Layers,
     title: "Scale",
-    description: "For growing businesses expanding operations across markets.",
-    idealFor: "Businesses expanding into new markets or scaling operations",
-    outcomes: [
-      "Scalable technology and automation",
-      "Operational efficiency",
-      "Sustainable expansion",
+    perfectFor: ["Established businesses", "Multi-location companies", "Growing organizations"],
+    focus: [
+      "Business Automation",
+      "AI Integration",
+      "Process Optimization",
+      "Team Enablement",
+      "Data Analytics",
     ],
-    ctaLabel: "Learn More",
+    ctaLabel: "Scale Your Business",
     href: "/how-we-partner/scale",
   },
   {
     icon: Building2,
     title: "Enterprise",
-    description: "For large organizations undergoing full digital transformation.",
-    idealFor: "Enterprises undergoing digital or organizational transformation",
-    outcomes: [
-      "Dedicated, integrated partnership",
-      "Enterprise-grade execution",
-      "Cross-functional transformation",
+    perfectFor: ["Large organizations", "Corporate brands", "Enterprise transformation"],
+    focus: [
+      "Digital Transformation",
+      "Enterprise Strategy",
+      "Technology Consulting",
+      "AI Systems",
+      "Long-term Strategic Partnership",
     ],
-    ctaLabel: "Learn More",
+    ctaLabel: "Talk to Our Team",
     href: "/how-we-partner/enterprise",
   },
 ];
 
 export function PartnershipModels({
-  eyebrow = "Our Partnership Models",
-  heading = "Four Ways We Partner With Ambitious Businesses",
-  description = "No pricing tiers, no generic packages. Each partnership model is built around where your business stands today and where it needs to go next.",
+  eyebrow = "Partnership Models",
+  heading = "Our Partnership Models",
+  description = "Every business is at a different stage of growth. Our partnership models are designed to provide the right level of strategy, execution, and long-term support based on where your business is today and where you want to go next.",
   models = defaultModels,
 }: PartnershipModelsProps) {
   const shouldReduceMotion = useReducedMotion();
@@ -143,21 +154,29 @@ export function PartnershipModels({
                     <Icon className="size-6" strokeWidth={1.75} />
                   </span>
                   <CardTitle>{model.title}</CardTitle>
-                  <CardDescription className="text-sm leading-relaxed">
-                    {model.description}
-                  </CardDescription>
 
-                  <div className="mt-4 flex flex-col gap-3">
+                  <div className="mt-4 flex flex-col gap-4">
                     <div>
                       <Text
                         variant="caption"
                         className="text-muted-foreground font-semibold tracking-wide uppercase"
                       >
-                        Ideal For
+                        Perfect For
                       </Text>
-                      <Text variant="small" className="text-foreground mt-1 text-pretty">
-                        {model.idealFor}
-                      </Text>
+                      <ul className="mt-1.5 flex flex-col gap-1.5">
+                        {model.perfectFor.map((item) => (
+                          <li
+                            key={item}
+                            className="text-muted-foreground flex items-start gap-2 text-sm"
+                          >
+                            <span
+                              aria-hidden="true"
+                              className="bg-primary mt-1.5 size-1.5 shrink-0 rounded-full"
+                            />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
 
                     <div>
@@ -165,20 +184,17 @@ export function PartnershipModels({
                         variant="caption"
                         className="text-muted-foreground font-semibold tracking-wide uppercase"
                       >
-                        Key Outcomes
+                        Focus
                       </Text>
-                      <ul className="mt-1 flex flex-col gap-1.5">
-                        {model.outcomes.map((outcome) => (
-                          <li
-                            key={outcome}
-                            className="text-foreground flex items-start gap-2 text-sm"
-                          >
+                      <ul className="mt-1.5 flex flex-col gap-1.5">
+                        {model.focus.map((item) => (
+                          <li key={item} className="text-foreground flex items-start gap-2 text-sm">
                             <Check
                               aria-hidden="true"
                               className="text-primary mt-0.5 size-4 shrink-0"
                               strokeWidth={2}
                             />
-                            <span>{outcome}</span>
+                            <span>{item}</span>
                           </li>
                         ))}
                       </ul>
