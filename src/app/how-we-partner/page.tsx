@@ -14,7 +14,7 @@ import { FinalCta } from "@/components/about";
 export const metadata: Metadata = buildMetadata({
   fullTitle: "How We Partner | KREBIG International Group",
   description:
-    "KREBIG International Group partners with ambitious businesses through four growth-stage models — Launch, Growth, Scale and Enterprise — built on strategy, technology, creativity and AI.",
+    "KREBIG International Group partners with businesses through four growth models — Launch, Growth, Scale and Enterprise — powered by strategy, technology and AI.",
   path: "/how-we-partner",
 });
 
@@ -36,12 +36,12 @@ export default function HowWePartnerPage() {
       <PartnerStats />
       <FinalCta
         heading="Let's Build Your Next Stage of Growth"
-        description="Whichever stage your business is at, KREBIG is ready to partner with you on the strategy, technology and execution to get there."
+        description="Whether you're launching a new business, accelerating growth, scaling operations, or transforming an enterprise, KREBIG is ready to become your long-term business growth partner."
         primaryCtaLabel="Book a Consultation"
         primaryCtaHref="/#contact"
         secondaryCtaLabel="Contact Our Team"
-        secondaryCtaHref="mailto:hello@krebig.com"
-        secondaryIcon="mail"
+        secondaryCtaHref="/#contact"
+        secondaryIcon="none"
       />
     </>
   );
