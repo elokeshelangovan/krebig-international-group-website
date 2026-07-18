@@ -23,9 +23,9 @@ export function ContactHero({
   heading = "Let's Start the Conversation",
   description = "Whether you're looking to grow your business, explore a partnership, discuss a project, or join our team, we're here to help. Connect with KREBIG and let's build something meaningful together.",
   primaryCtaLabel = "Schedule a Consultation",
-  primaryCtaHref = "#contact-methods",
+  primaryCtaHref = "/contact/schedule-consultation",
   secondaryCtaLabel = "Send an Enquiry",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "#contact-form",
 }: ContactHeroProps) {
   return (
     <Section id="contact-hero" aria-label="Contact" tone="default" spacing="xl" containerSize="lg">

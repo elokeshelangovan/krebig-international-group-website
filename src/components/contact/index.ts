@@ -5,3 +5,4 @@ export * from "./office-information";
 export * from "./contact-form";
 export * from "./faq";
 export * from "./consultation-process";
+export * from "./schedule-consultation-placeholder";
