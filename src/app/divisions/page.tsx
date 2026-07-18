@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
+import { jsonLdScriptProps, breadcrumbSchema, webPageSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import {
   DivisionsHero,
@@ -28,6 +28,16 @@ export default function DivisionsPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Divisions", url: new URL("/divisions", siteConfig.url).toString() },
           ]),
+        )}
+      />
+      <script
+        {...jsonLdScriptProps(
+          webPageSchema({
+            name: "KREBIG Divisions | Marketing, Studio, Technology & Academy",
+            description:
+              "KREBIG's four specialized divisions — Digital Media, Studio, Technology and Academy — work as one integrated ecosystem to deliver measurable business growth.",
+            url: new URL("/divisions", siteConfig.url).toString(),
+          }),
         )}
       />
       <DivisionsHero />

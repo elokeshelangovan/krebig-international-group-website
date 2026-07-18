@@ -139,7 +139,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     ...defaultArticles.map((article) => ({
       url: new URL(article.href, siteConfig.url).toString(),
-      lastModified: new Date(),
+      lastModified: new Date(article.publishedAt),
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),

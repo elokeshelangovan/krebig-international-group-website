@@ -24,13 +24,7 @@ export interface SocialLink {
   icon: ComponentType<SVGAttributes<SVGSVGElement>>;
 }
 
-/**
- * Primary header navigation. Items with a dedicated route (Home, About,
- * How We Partner, Divisions, Industry Solutions, Insights, Careers) link
- * there; the rest link to the in-page sections they correspond to
- * (`id="contact"`, etc. in src/components/sections) since those don't have
- * standalone routes yet.
- */
+/** Primary header navigation. Every item links to its own dedicated route. */
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },

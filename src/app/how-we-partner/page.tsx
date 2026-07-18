@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
+import { jsonLdScriptProps, breadcrumbSchema, webPageSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import {
   PartnerHero,
@@ -27,6 +27,16 @@ export default function HowWePartnerPage() {
             { name: "Home", url: siteConfig.url },
             { name: "How We Partner", url: new URL("/how-we-partner", siteConfig.url).toString() },
           ]),
+        )}
+      />
+      <script
+        {...jsonLdScriptProps(
+          webPageSchema({
+            name: "How We Partner | KREBIG International Group",
+            description:
+              "KREBIG International Group partners with businesses through four growth models — Launch, Growth, Scale and Enterprise — powered by strategy, technology and AI.",
+            url: new URL("/how-we-partner", siteConfig.url).toString(),
+          }),
         )}
       />
       <PartnerHero />
