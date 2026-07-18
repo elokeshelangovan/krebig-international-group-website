@@ -7,6 +7,8 @@ import {
   DivisionsIntro,
   DivisionsWorkflow,
   DivisionsShowcase,
+  DivisionsCollaboration,
+  WhyStructureWorks,
 } from "@/components/divisions";
 
 export const metadata: Metadata = buildMetadata({
@@ -31,6 +33,8 @@ export default function DivisionsPage() {
       <DivisionsIntro />
       <DivisionsWorkflow />
       <DivisionsShowcase />
+      <DivisionsCollaboration />
+      <WhyStructureWorks />
     </>
   );
 }
