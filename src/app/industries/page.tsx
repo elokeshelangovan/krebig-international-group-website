@@ -7,6 +7,8 @@ import {
   IndustrySolutionsIntro,
   IndustrySolutionsApproach,
   IndustrySolutionsShowcase,
+  WhyIndustryExpertiseMatters,
+  SuccessFramework,
 } from "@/components/industry-solutions";
 
 export const metadata: Metadata = buildMetadata({
@@ -31,6 +33,8 @@ export default function IndustrySolutionsPage() {
       <IndustrySolutionsIntro />
       <IndustrySolutionsApproach />
       <IndustrySolutionsShowcase />
+      <WhyIndustryExpertiseMatters />
+      <SuccessFramework />
     </>
   );
 }
