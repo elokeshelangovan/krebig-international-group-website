@@ -43,7 +43,7 @@ export function InsightsNewsletter({
       containerSize="lg"
     >
       <m.div
-        className="from-primary to-accent-foreground rounded-card mx-auto flex max-w-3xl flex-col items-center gap-6 bg-gradient-to-br p-8 text-center lg:p-14"
+        className="rounded-card mx-auto flex max-w-3xl flex-col items-center gap-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-950 p-8 text-center lg:p-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
@@ -52,17 +52,17 @@ export function InsightsNewsletter({
         <m.span
           variants={fadeInUp}
           aria-hidden="true"
-          className="bg-primary-foreground/15 text-primary-foreground flex size-14 items-center justify-center rounded-2xl"
+          className="flex size-14 items-center justify-center rounded-2xl bg-white/15 text-white"
         >
           <Mail className="size-7" strokeWidth={1.75} />
         </m.span>
         <m.div variants={fadeInUp}>
-          <Heading level={2} className="text-primary-foreground">
+          <Heading level={2} className="text-white">
             {heading}
           </Heading>
         </m.div>
         <m.div variants={fadeInUp}>
-          <Text variant="lead" className="text-primary-foreground/85 max-w-xl text-pretty">
+          <Text variant="lead" className="max-w-xl text-pretty text-indigo-100">
             {description}
           </Text>
         </m.div>
@@ -71,7 +71,7 @@ export function InsightsNewsletter({
           {submitted ? (
             <div
               role="status"
-              className="bg-primary-foreground/10 text-primary-foreground rounded-input border-primary-foreground/20 border px-4 py-3 text-sm font-medium"
+              className="rounded-input border border-white/20 bg-white/10 px-4 py-3 text-sm font-medium text-white"
             >
               Thanks for subscribing — you&apos;re on the list.
             </div>
@@ -91,7 +91,7 @@ export function InsightsNewsletter({
                 required
                 autoComplete="email"
                 placeholder="Email Address"
-                className="border-primary-foreground/25 bg-primary-foreground/10 text-primary-foreground placeholder:text-primary-foreground/60 rounded-input duration-fast ease-standard focus-visible:ring-primary-foreground w-full border px-4 py-2.5 text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
+                className="rounded-input duration-fast ease-standard w-full border border-white/25 bg-white/10 px-4 py-2.5 text-sm text-white transition-colors placeholder:text-white/60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
               />
               <Button
                 type="submit"
@@ -104,10 +104,7 @@ export function InsightsNewsletter({
           )}
         </m.div>
 
-        <m.div
-          variants={fadeInUp}
-          className="text-primary-foreground/70 inline-flex items-center gap-2 text-xs"
-        >
+        <m.div variants={fadeInUp} className="inline-flex items-center gap-2 text-xs text-white/70">
           <ShieldCheck aria-hidden="true" className="size-4" />
           {privacyNote}
         </m.div>

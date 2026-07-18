@@ -76,7 +76,7 @@ export function LatestArticles({
               className="group"
             >
               <Card className="hover:border-primary/30 hover:shadow-dropdown duration-base ease-standard flex h-full flex-col overflow-hidden transition-[border-color,box-shadow]">
-                <div className="from-primary to-accent-foreground relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br">
+                <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-950">
                   <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">
                     <defs>
                       <pattern
@@ -92,7 +92,7 @@ export function LatestArticles({
                   </svg>
                   <Icon
                     aria-hidden="true"
-                    className="text-primary-foreground/90 relative size-14"
+                    className="relative size-14 text-white/90"
                     strokeWidth={1.25}
                   />
                   <span className="bg-popover text-popover-foreground shadow-dropdown absolute top-4 left-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase">

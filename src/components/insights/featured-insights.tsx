@@ -91,7 +91,7 @@ export function FeaturedInsights({
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >
           <Card className="hover:shadow-modal duration-base ease-standard mx-auto grid max-w-5xl overflow-hidden transition-shadow lg:grid-cols-2">
-            <div className="from-primary to-accent-foreground relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br lg:aspect-auto">
+            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-950 lg:aspect-auto">
               <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">
                 <defs>
                   <pattern
@@ -107,7 +107,7 @@ export function FeaturedInsights({
               </svg>
               <Bot
                 aria-hidden="true"
-                className="text-primary-foreground/90 relative size-24 sm:size-32"
+                className="relative size-24 text-white/90 sm:size-32"
                 strokeWidth={1.25}
               />
               <span className="bg-popover text-popover-foreground shadow-dropdown absolute top-5 left-5 inline-flex items-center rounded-full px-4 py-1.5 text-xs font-semibold tracking-wide uppercase">
