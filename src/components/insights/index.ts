@@ -5,3 +5,5 @@ export * from "./insights-topics";
 export * from "./latest-articles";
 export * from "./browse-by-category";
 export * from "./insights-newsletter";
+export * from "./article-placeholder";
+export * from "./category-placeholder";
