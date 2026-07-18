@@ -121,6 +121,34 @@ export function jobPostingSchema(job: JobPostingItem) {
   };
 }
 
+export interface ContactPageSchemaOptions {
+  name: string;
+  description: string;
+  url: string;
+}
+
+export function contactPageSchema({ name, description, url }: ContactPageSchemaOptions) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    name,
+    description,
+    url,
+    mainEntity: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        email: "hello@krebig.com",
+        areaServed: "Worldwide",
+        availableLanguage: "English",
+      },
+    },
+  };
+}
+
 export interface BlogPostingItem {
   title: string;
   description: string;
