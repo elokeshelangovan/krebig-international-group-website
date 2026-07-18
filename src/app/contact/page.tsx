@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
-import { ContactHero, ContactMethods, OfficeInformation } from "@/components/contact";
+import {
+  ContactHero,
+  ContactMethods,
+  OfficeInformation,
+  ContactForm,
+  Faq,
+  ConsultationProcess,
+} from "@/components/contact";
 
 export const metadata: Metadata = buildMetadata({
   fullTitle: "Contact KREBIG | Let's Start the Conversation",
@@ -25,6 +32,9 @@ export default function ContactPage() {
       <ContactHero />
       <ContactMethods />
       <OfficeInformation />
+      <ContactForm />
+      <Faq />
+      <ConsultationProcess />
     </>
   );
 }
