@@ -42,7 +42,7 @@ export default function CareersPage() {
         primaryCtaLabel="Apply Now"
         primaryCtaHref="#open-opportunities"
         secondaryCtaLabel="Contact Recruitment"
-        secondaryCtaHref="/#contact"
+        secondaryCtaHref="/contact"
         secondaryIcon="none"
       />
     </>

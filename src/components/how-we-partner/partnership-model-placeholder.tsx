@@ -9,22 +9,24 @@ import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
 
-export interface DivisionPlaceholderProps {
+export interface PartnershipModelPlaceholderProps {
   icon: ReactNode;
   name: string;
   description: string;
-  capabilities: string[];
+  perfectFor: string[];
+  focus: string[];
 }
 
-export function DivisionPlaceholder({
+export function PartnershipModelPlaceholder({
   icon,
   name,
   description,
-  capabilities,
-}: DivisionPlaceholderProps) {
+  perfectFor,
+  focus,
+}: PartnershipModelPlaceholderProps) {
   return (
     <Section
-      id="division-placeholder"
+      id="partnership-model-placeholder"
       aria-label={name}
       tone="default"
       spacing="xl"
@@ -57,30 +59,56 @@ export function DivisionPlaceholder({
         </m.div>
         <m.div variants={fadeInUp}>
           <Text variant="lead" className="text-muted-foreground text-pretty">
-            {`${description} A dedicated page for this division is on its way — in the meantime, here's what we bring to the table.`}
+            {`${description} A dedicated page for this partnership model is on its way — in the meantime, here's what it's built for.`}
           </Text>
         </m.div>
-        <m.ul
-          variants={fadeInUp}
-          className="mt-2 grid grid-cols-1 gap-x-8 gap-y-2 text-left sm:grid-cols-2"
-        >
-          {capabilities.map((capability) => (
-            <li key={capability} className="text-foreground flex items-start gap-2 text-sm">
-              <Check
-                aria-hidden="true"
-                className="text-primary mt-0.5 size-4 shrink-0"
-                strokeWidth={2}
-              />
-              <span>{capability}</span>
-            </li>
-          ))}
-        </m.ul>
+        <m.div variants={fadeInUp} className="mt-2 grid grid-cols-1 gap-8 text-left sm:grid-cols-2">
+          <div>
+            <Text
+              variant="caption"
+              className="text-muted-foreground font-semibold tracking-wide uppercase"
+            >
+              Perfect For
+            </Text>
+            <ul className="mt-1.5 flex flex-col gap-1.5">
+              {perfectFor.map((item) => (
+                <li key={item} className="text-muted-foreground flex items-start gap-2 text-sm">
+                  <span
+                    aria-hidden="true"
+                    className="bg-primary mt-1.5 size-1.5 shrink-0 rounded-full"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <Text
+              variant="caption"
+              className="text-muted-foreground font-semibold tracking-wide uppercase"
+            >
+              Focus
+            </Text>
+            <ul className="mt-1.5 flex flex-col gap-1.5">
+              {focus.map((item) => (
+                <li key={item} className="text-foreground flex items-start gap-2 text-sm">
+                  <Check
+                    aria-hidden="true"
+                    className="text-primary mt-0.5 size-4 shrink-0"
+                    strokeWidth={2}
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </m.div>
         <m.div variants={fadeInUp} className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
           <Button asChild size="lg">
             <Link href="/contact">Contact Our Team</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href="/divisions">Back to Divisions</Link>
+            <Link href="/how-we-partner">Back to How We Partner</Link>
           </Button>
         </m.div>
       </m.div>

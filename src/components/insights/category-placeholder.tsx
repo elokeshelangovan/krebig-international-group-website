@@ -61,7 +61,7 @@ export function CategoryPlaceholder({
         </m.div>
         <m.div variants={fadeInUp} className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
           <Button asChild size="lg">
-            <Link href="/#contact">Contact Our Experts</Link>
+            <Link href="/contact">Contact Our Experts</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/insights">Back to Insights</Link>

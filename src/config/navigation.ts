@@ -39,11 +39,11 @@ export const primaryNav: NavItem[] = [
   { label: "Industry Solutions", href: "/industries" },
   { label: "Insights", href: "/insights" },
   { label: "Careers", href: "/careers" },
-  { label: "Contact", href: "/#contact" },
+  { label: "Contact", href: "/contact" },
 ];
 
 /** Optional primary call-to-action rendered at the end of the header nav. */
-export const primaryNavCta: NavItem | null = { label: "Book Strategy Call", href: "/#contact" };
+export const primaryNavCta: NavItem | null = { label: "Book Strategy Call", href: "/contact" };
 
 /** Footer link columns. */
 export const footerNav: FooterColumn[] = [
@@ -51,9 +51,9 @@ export const footerNav: FooterColumn[] = [
     title: "Company",
     links: [
       { label: "About", href: "/about" },
-      { label: "Leadership", href: "/about/leadership" },
+      { label: "Leadership", href: "/about#leadership-philosophy" },
       { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/#contact" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
@@ -84,7 +84,7 @@ export const footerNav: FooterColumn[] = [
       { label: "Retail & E-Commerce", href: "/industries/retail-ecommerce" },
       { label: "Manufacturing", href: "/industries/manufacturing" },
       { label: "Education", href: "/industries/education" },
-      { label: "Finance", href: "/industries/finance" },
+      { label: "Professional Services", href: "/industries/professional-services" },
     ],
   },
 ];

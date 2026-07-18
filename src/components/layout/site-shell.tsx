@@ -2,6 +2,7 @@ import * as React from "react";
 import { AnnouncementBar, type AnnouncementBarProps } from "@/components/layout/announcement-bar";
 import { Navbar, type NavbarProps } from "@/components/layout/navbar";
 import { Footer, type FooterProps } from "@/components/layout/footer";
+import { RouteFocusManager } from "@/components/layout/route-focus-manager";
 
 export interface SiteShellProps {
   children: React.ReactNode;
@@ -26,6 +27,7 @@ export function SiteShell({
       >
         Skip to content
       </a>
+      <RouteFocusManager mainId={mainId} />
       {announcementBarProps === false ? null : <AnnouncementBar {...announcementBarProps} />}
       <Navbar {...navbarProps} />
       <main id={mainId} tabIndex={-1} className="flex flex-1 flex-col focus:outline-none">

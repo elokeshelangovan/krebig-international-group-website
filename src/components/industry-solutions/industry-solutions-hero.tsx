@@ -25,7 +25,7 @@ export function IndustrySolutionsHero({
   primaryCtaLabel = "Explore Industries",
   primaryCtaHref = "#industry-showcase",
   secondaryCtaLabel = "Talk to Our Team",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "/contact",
 }: IndustrySolutionsHeroProps) {
   return (
     <Section

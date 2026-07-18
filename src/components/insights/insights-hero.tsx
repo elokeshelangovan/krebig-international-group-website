@@ -25,7 +25,7 @@ export function InsightsHero({
   primaryCtaLabel = "Explore Insights",
   primaryCtaHref = "#featured-insights",
   secondaryCtaLabel = "Contact Our Experts",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "/contact",
 }: InsightsHeroProps) {
   return (
     <Section

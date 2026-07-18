@@ -5,6 +5,7 @@ import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import { ApplyPlaceholder } from "@/components/careers";
 import { defaultPositions } from "@/components/careers/data";
+import { Container, Breadcrumbs } from "@/components/layout";
 
 interface ApplyPageProps {
   params: Promise<{ slug: string }>;
@@ -49,18 +50,18 @@ export default async function ApplyPage({ params }: ApplyPageProps) {
   }
 
   const Icon = position.icon;
+  const breadcrumbItems = [
+    { name: "Home", url: siteConfig.url },
+    { name: "Careers", url: new URL("/careers", siteConfig.url).toString() },
+    { name: position.title, url: new URL(position.href, siteConfig.url).toString() },
+  ];
 
   return (
     <>
-      <script
-        {...jsonLdScriptProps(
-          breadcrumbSchema([
-            { name: "Home", url: siteConfig.url },
-            { name: "Careers", url: new URL("/careers", siteConfig.url).toString() },
-            { name: position.title, url: new URL(position.href, siteConfig.url).toString() },
-          ]),
-        )}
-      />
+      <script {...jsonLdScriptProps(breadcrumbSchema(breadcrumbItems))} />
+      <Container size="lg" className="pt-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </Container>
       <ApplyPlaceholder
         icon={<Icon className="size-8" />}
         title={position.title}

@@ -38,9 +38,9 @@ export default function HowWePartnerPage() {
         heading="Let's Build Your Next Stage of Growth"
         description="Whether you're launching a new business, accelerating growth, scaling operations, or transforming an enterprise, KREBIG is ready to become your long-term business growth partner."
         primaryCtaLabel="Book a Consultation"
-        primaryCtaHref="/#contact"
+        primaryCtaHref="/contact"
         secondaryCtaLabel="Contact Our Team"
-        secondaryCtaHref="/#contact"
+        secondaryCtaHref="/contact"
         secondaryIcon="none"
       />
     </>

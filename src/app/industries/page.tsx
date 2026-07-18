@@ -40,9 +40,9 @@ export default function IndustrySolutionsPage() {
         heading="Let's Build Industry-Specific Growth Together"
         description="Every industry is different, and every business deserves a strategy designed around its unique goals. Partner with KREBIG to combine strategy, creativity, technology, and AI for sustainable business growth."
         primaryCtaLabel="Book a Strategy Session"
-        primaryCtaHref="/#contact"
+        primaryCtaHref="/contact"
         secondaryCtaLabel="Contact Our Team"
-        secondaryCtaHref="/#contact"
+        secondaryCtaHref="/contact"
         secondaryIcon="none"
       />
     </>

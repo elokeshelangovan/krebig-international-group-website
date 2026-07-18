@@ -58,7 +58,7 @@ export function BusinessPhilosophy({
   principles = defaultPrinciples,
   ctaHeading = "Let's Build Sustainable Business Growth Together",
   primaryCtaLabel = "Book Strategy Call",
-  primaryCtaHref = "/#contact",
+  primaryCtaHref = "/contact",
   secondaryCtaLabel = "Explore How We Partner",
   secondaryCtaHref = "/how-we-partner",
 }: BusinessPhilosophyProps) {

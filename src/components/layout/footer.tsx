@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Download } from "lucide-react";
 import { m, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
@@ -43,9 +42,9 @@ export function Footer({
   ctaHeading = "Ready To Build Something Bigger?",
   ctaDescription = "Partner with KREBIG International Group and transform your business through strategy, creativity, technology and AI.",
   ctaPrimaryLabel = "Book Strategy Call",
-  ctaPrimaryHref = "/#contact",
-  ctaSecondaryLabel = "Download Company Profile",
-  ctaSecondaryHref = "/company-profile.pdf",
+  ctaPrimaryHref = "/contact",
+  ctaSecondaryLabel = "Contact Our Team",
+  ctaSecondaryHref = "/contact",
   className,
 }: FooterProps) {
   const shouldReduceMotion = useReducedMotion();
@@ -83,10 +82,7 @@ export function Footer({
                 variant="outline"
                 className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
               >
-                <Link href={ctaSecondaryHref}>
-                  <Download aria-hidden="true" className="size-4" />
-                  {ctaSecondaryLabel}
-                </Link>
+                <Link href={ctaSecondaryHref}>{ctaSecondaryLabel}</Link>
               </Button>
             </m.div>
           </m.div>

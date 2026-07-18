@@ -25,7 +25,7 @@ export function CareersHero({
   primaryCtaLabel = "View Opportunities",
   primaryCtaHref = "#open-opportunities",
   secondaryCtaLabel = "Get in Touch",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "/contact",
 }: CareersHeroProps) {
   return (
     <Section id="careers-hero" aria-label="Careers" tone="default" spacing="xl" containerSize="lg">

@@ -40,9 +40,9 @@ export default function DivisionsPage() {
         heading="Build Your Business with the Right Expertise"
         description="Whether you need strategic marketing, creative production, technology solutions, or professional development, KREBIG brings together specialized expertise to help your business grow with confidence."
         primaryCtaLabel="Start a Conversation"
-        primaryCtaHref="/#contact"
+        primaryCtaHref="/contact"
         secondaryCtaLabel="Contact Our Team"
-        secondaryCtaHref="/#contact"
+        secondaryCtaHref="/contact"
         secondaryIcon="none"
       />
     </>

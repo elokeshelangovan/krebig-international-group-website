@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils/cn";
 import { Container, type ContainerProps } from "@/components/layout/container";
 
-const sectionVariants = cva("w-full", {
+const sectionVariants = cva("w-full scroll-mt-24", {
   variants: {
     spacing: {
       none: "",

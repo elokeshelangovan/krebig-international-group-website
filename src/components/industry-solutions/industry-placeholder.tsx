@@ -77,7 +77,7 @@ export function IndustryPlaceholder({
         </m.ul>
         <m.div variants={fadeInUp} className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
           <Button asChild size="lg">
-            <Link href="/#contact">Contact Our Team</Link>
+            <Link href="/contact">Contact Our Team</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/industries">Back to Industries</Link>

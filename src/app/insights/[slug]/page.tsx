@@ -5,6 +5,7 @@ import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import { ArticlePlaceholder } from "@/components/insights";
 import { defaultArticles } from "@/components/insights/data";
+import { Container, Breadcrumbs } from "@/components/layout";
 
 interface ArticlePageProps {
   params: Promise<{ slug: string }>;
@@ -49,18 +50,18 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   }
 
   const Icon = article.icon;
+  const breadcrumbItems = [
+    { name: "Home", url: siteConfig.url },
+    { name: "Insights", url: new URL("/insights", siteConfig.url).toString() },
+    { name: article.title, url: new URL(article.href, siteConfig.url).toString() },
+  ];
 
   return (
     <>
-      <script
-        {...jsonLdScriptProps(
-          breadcrumbSchema([
-            { name: "Home", url: siteConfig.url },
-            { name: "Insights", url: new URL("/insights", siteConfig.url).toString() },
-            { name: article.title, url: new URL(article.href, siteConfig.url).toString() },
-          ]),
-        )}
-      />
+      <script {...jsonLdScriptProps(breadcrumbSchema(breadcrumbItems))} />
+      <Container size="lg" className="pt-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </Container>
       <ArticlePlaceholder
         icon={<Icon className="size-8" />}
         category={article.category}
