@@ -5,3 +5,4 @@ export * from "./industry-solutions-approach";
 export * from "./industry-solutions-showcase";
 export * from "./why-industry-expertise-matters";
 export * from "./success-framework";
+export * from "./industry-placeholder";
