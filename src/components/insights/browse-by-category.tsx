@@ -1,32 +1,16 @@
 "use client";
 
-import type { ComponentType } from "react";
 import Link from "next/link";
-import { Bot, Award, Newspaper } from "lucide-react";
 import { m, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
-import { MegaphoneIcon, CompassIcon, PenToolIcon } from "@/components/sections/services-icons";
-import { CodeIcon } from "@/components/sections/divisions-icons";
-import { LightbulbIcon } from "@/components/about/values-icons";
-import type { IconProps } from "@/components/sections/services-icons";
+import { defaultCategories, type InsightCategory } from "./data";
 
-/**
- * `slug` and `articleCount` are future-ready for category filtering and a
- * real article count once a CMS is wired up; `articleCount` is a
- * placeholder value only.
- */
-export interface InsightCategory {
-  slug: string;
-  icon: ComponentType<IconProps>;
-  name: string;
-  description: string;
-  articleCount: number;
-  href: string;
-}
+export type { InsightCategory };
+export { defaultCategories };
 
 export interface BrowseByCategoryProps {
   eyebrow?: string;
@@ -34,73 +18,6 @@ export interface BrowseByCategoryProps {
   description?: string;
   categories?: InsightCategory[];
 }
-
-const defaultCategories: InsightCategory[] = [
-  {
-    slug: "ai-automation",
-    icon: Bot,
-    name: "AI & Automation",
-    description: "Practical ways AI and automation accelerate business performance.",
-    articleCount: 2,
-    href: "/insights/category/ai-automation",
-  },
-  {
-    slug: "digital-marketing",
-    icon: MegaphoneIcon,
-    name: "Digital Marketing",
-    description: "Strategies for visibility, engagement, and measurable growth.",
-    articleCount: 1,
-    href: "/insights/category/digital-marketing",
-  },
-  {
-    slug: "branding",
-    icon: PenToolIcon,
-    name: "Branding",
-    description: "Building brands that earn trust and stand apart.",
-    articleCount: 1,
-    href: "/insights/category/branding",
-  },
-  {
-    slug: "business-strategy",
-    icon: CompassIcon,
-    name: "Business Strategy",
-    description: "Frameworks and thinking for confident, informed decisions.",
-    articleCount: 1,
-    href: "/insights/category/business-strategy",
-  },
-  {
-    slug: "technology",
-    icon: CodeIcon,
-    name: "Technology",
-    description: "Platforms and systems that power scalable businesses.",
-    articleCount: 1,
-    href: "/insights/category/technology",
-  },
-  {
-    slug: "leadership",
-    icon: Award,
-    name: "Leadership",
-    description: "Perspectives on leading teams through change and growth.",
-    articleCount: 1,
-    href: "/insights/category/leadership",
-  },
-  {
-    slug: "industry-insights",
-    icon: Newspaper,
-    name: "Industry Insights",
-    description: "Trends and shifts shaping businesses across sectors.",
-    articleCount: 1,
-    href: "/insights/category/industry-insights",
-  },
-  {
-    slug: "innovation",
-    icon: LightbulbIcon,
-    name: "Innovation",
-    description: "Fresh thinking on what's next for modern business.",
-    articleCount: 1,
-    href: "/insights/category/innovation",
-  },
-];
 
 export function BrowseByCategory({
   eyebrow = "Find What You Need",

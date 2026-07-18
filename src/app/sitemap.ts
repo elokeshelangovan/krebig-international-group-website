@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
+import { defaultArticles, defaultCategories } from "@/components/insights/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -111,5 +112,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.8,
     },
+    ...defaultArticles.map((article) => ({
+      url: new URL(article.href, siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    ...defaultCategories.map((category) => ({
+      url: new URL(category.href, siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
   ];
 }
