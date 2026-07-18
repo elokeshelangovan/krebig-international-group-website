@@ -69,6 +69,58 @@ export function webPageSchema({ name, description, url }: WebPageSchemaOptions) 
   };
 }
 
+export interface JobPostingItem {
+  title: string;
+  description: string;
+  url: string;
+  datePosted: string;
+  employmentType: string;
+  department: string;
+  location: string;
+  locationType: "on-site" | "hybrid" | "remote";
+}
+
+/**
+ * Ready for when Current Opportunities are backed by a real ATS with a
+ * working application flow. Not rendered on the live page yet: Google's
+ * JobPosting guidelines expect postings to link to a functioning
+ * application process, and today "Apply Now" links to a "Coming Soon"
+ * placeholder rather than a real application.
+ */
+export function jobPostingSchema(job: JobPostingItem) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "JobPosting",
+    title: job.title,
+    description: job.description,
+    url: job.url,
+    datePosted: job.datePosted,
+    employmentType: job.employmentType.toUpperCase().replace(/-/g, "_"),
+    hiringOrganization: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      sameAs: siteConfig.url,
+    },
+    ...(job.locationType === "remote"
+      ? {
+          jobLocationType: "TELECOMMUTE",
+          applicantLocationRequirements: {
+            "@type": "Country",
+            name: "Worldwide",
+          },
+        }
+      : {
+          jobLocation: {
+            "@type": "Place",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: job.location,
+            },
+          },
+        }),
+  };
+}
+
 export interface BlogPostingItem {
   title: string;
   description: string;

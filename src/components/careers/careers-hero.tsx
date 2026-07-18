@@ -23,7 +23,7 @@ export function CareersHero({
   heading = "Build Your Future with KREBIG",
   description = "Join a team that combines creativity, technology, strategy, and AI to solve real business challenges. At KREBIG, we believe great people build great businesses.",
   primaryCtaLabel = "View Opportunities",
-  primaryCtaHref = "#why-join-krebig",
+  primaryCtaHref = "#open-opportunities",
   secondaryCtaLabel = "Get in Touch",
   secondaryCtaHref = "/#contact",
 }: CareersHeroProps) {

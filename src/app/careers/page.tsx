@@ -10,6 +10,7 @@ import {
   HiringProcess,
   BenefitsGrowth,
 } from "@/components/careers";
+import { FinalCta } from "@/components/about";
 
 export const metadata: Metadata = buildMetadata({
   fullTitle: "Careers at KREBIG | Build Your Future in Business Growth",
@@ -35,6 +36,15 @@ export default function CareersPage() {
       <OpenOpportunities />
       <HiringProcess />
       <BenefitsGrowth />
+      <FinalCta
+        heading="Ready to Build Your Career with KREBIG?"
+        description="If you're passionate about innovation, creativity, technology, AI, and solving meaningful business challenges, we'd love to hear from you. Join us in shaping the future of business growth."
+        primaryCtaLabel="Apply Now"
+        primaryCtaHref="#open-opportunities"
+        secondaryCtaLabel="Contact Recruitment"
+        secondaryCtaHref="/#contact"
+        secondaryIcon="none"
+      />
     </>
   );
 }
