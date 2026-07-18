@@ -26,9 +26,10 @@ export interface SocialLink {
 
 /**
  * Primary header navigation. Items with a dedicated route (Home, About,
- * How We Partner, Divisions, Industry Solutions) link there; the rest link
- * to the in-page sections they correspond to (`id="insights"`, etc. in
- * src/components/sections) since those don't have standalone routes yet.
+ * How We Partner, Divisions, Industry Solutions, Insights) link there; the
+ * rest link to the in-page sections they correspond to (`id="careers"`,
+ * etc. in src/components/sections) since those don't have standalone
+ * routes yet.
  */
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
@@ -36,7 +37,7 @@ export const primaryNav: NavItem[] = [
   { label: "How We Partner", href: "/how-we-partner" },
   { label: "Divisions", href: "/divisions" },
   { label: "Industry Solutions", href: "/industries" },
-  { label: "Insights", href: "/#insights" },
+  { label: "Insights", href: "/insights" },
   { label: "Careers", href: "/#careers" },
   { label: "Contact", href: "/#contact" },
 ];
