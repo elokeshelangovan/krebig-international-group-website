@@ -268,16 +268,16 @@ export function Contact({
 
       {/* Bottom CTA band */}
       <m.div
-        className="from-primary to-accent-foreground text-primary-foreground rounded-card mt-16 flex flex-col items-center gap-6 bg-gradient-to-br p-8 text-center lg:mt-20 lg:p-14"
+        className="rounded-card mt-16 flex flex-col items-center gap-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-950 p-8 text-center lg:mt-20 lg:p-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
         variants={fadeInUp}
       >
-        <Heading level={3} className="text-primary-foreground">
+        <Heading level={3} className="text-white">
           {bandHeading}
         </Heading>
-        <Text variant="lead" className="text-primary-foreground/85 max-w-2xl text-pretty">
+        <Text variant="lead" className="max-w-2xl text-pretty text-indigo-100">
           {bandDescription}
         </Text>
         <m.div variants={fadeInUp} className="flex flex-col items-center gap-4 sm:flex-row">
@@ -288,7 +288,7 @@ export function Contact({
             asChild
             size="lg"
             variant="outline"
-            className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground bg-transparent"
+            className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
           >
             <Link href={bandSecondaryCtaHref}>
               <Download aria-hidden="true" className="size-4" />

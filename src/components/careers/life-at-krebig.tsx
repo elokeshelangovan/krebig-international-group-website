@@ -86,8 +86,8 @@ export function LifeAtKrebig({
               className={index === 0 ? "col-span-2 lg:col-span-1" : undefined}
             >
               <div
-                className={`from-primary to-accent-foreground group hover:shadow-modal duration-base ease-standard relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br transition-shadow ${
-                  index % 2 === 1 ? "to-primary from-accent-foreground" : ""
+                className={`group hover:shadow-modal duration-base ease-standard relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-950 transition-shadow ${
+                  index % 2 === 1 ? "from-indigo-950 to-indigo-600" : ""
                 }`}
               >
                 <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">
@@ -109,7 +109,7 @@ export function LifeAtKrebig({
                 </svg>
                 <Icon
                   aria-hidden="true"
-                  className="text-primary-foreground/90 relative size-12 transition-transform duration-300 group-hover:scale-110 sm:size-14"
+                  className="relative size-12 text-white/90 transition-transform duration-300 group-hover:scale-110 sm:size-14"
                   strokeWidth={1.25}
                 />
                 <span className="bg-popover text-popover-foreground shadow-dropdown absolute bottom-4 left-4 inline-flex items-center rounded-full px-3 py-1 text-xs font-semibold tracking-wide uppercase">

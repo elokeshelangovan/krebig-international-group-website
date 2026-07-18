@@ -95,9 +95,9 @@ export function PartnerStats({
               <Card className="hover:border-primary/30 hover:shadow-dropdown duration-base ease-standard flex h-full flex-col items-center gap-2 p-6 text-center transition-[border-color,box-shadow]">
                 <span
                   aria-hidden="true"
-                  className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-1 flex size-11 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
+                  className="bg-accent text-accent-foreground group-hover:bg-primary group-hover:text-primary-foreground duration-base ease-standard mb-2 flex size-12 items-center justify-center rounded-xl transition-colors group-hover:scale-110 group-hover:-rotate-3"
                 >
-                  <Icon className="size-5" strokeWidth={1.75} />
+                  <Icon className="size-6" strokeWidth={1.75} />
                 </span>
                 <span className="text-primary text-2xl font-bold tracking-tight sm:text-3xl">
                   {stat.value !== undefined ? (
