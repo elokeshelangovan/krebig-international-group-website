@@ -5,3 +5,4 @@ export * from "./divisions-workflow";
 export * from "./divisions-showcase";
 export * from "./divisions-collaboration";
 export * from "./why-structure-works";
+export * from "./division-placeholder";

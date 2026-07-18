@@ -32,13 +32,7 @@ export function FinalCta({
 }: FinalCtaProps) {
   const SecondaryIcon = secondaryIcons[secondaryIcon];
   return (
-    <Section
-      id="final-cta"
-      aria-label="Let's Build Your Next Growth Story"
-      tone="default"
-      spacing="xl"
-      containerSize="lg"
-    >
+    <Section id="final-cta" aria-label={heading} tone="default" spacing="xl" containerSize="lg">
       <m.div
         className="from-primary to-accent-foreground text-primary-foreground rounded-card flex flex-col items-center gap-6 bg-gradient-to-br p-8 text-center lg:p-14"
         initial="hidden"

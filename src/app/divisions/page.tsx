@@ -10,11 +10,12 @@ import {
   DivisionsCollaboration,
   WhyStructureWorks,
 } from "@/components/divisions";
+import { FinalCta } from "@/components/about";
 
 export const metadata: Metadata = buildMetadata({
-  fullTitle: "Divisions | KREBIG International Group",
+  fullTitle: "KREBIG Divisions | Marketing, Studio, Technology & Academy",
   description:
-    "KREBIG's specialized divisions work as one integrated ecosystem, combining creativity, technology, education and strategy to deliver measurable growth.",
+    "KREBIG's four specialized divisions — Digital Media, Studio, Technology and Academy — work as one integrated ecosystem to deliver measurable business growth.",
   path: "/divisions",
 });
 
@@ -35,6 +36,15 @@ export default function DivisionsPage() {
       <DivisionsShowcase />
       <DivisionsCollaboration />
       <WhyStructureWorks />
+      <FinalCta
+        heading="Build Your Business with the Right Expertise"
+        description="Whether you need strategic marketing, creative production, technology solutions, or professional development, KREBIG brings together specialized expertise to help your business grow with confidence."
+        primaryCtaLabel="Start a Conversation"
+        primaryCtaHref="/#contact"
+        secondaryCtaLabel="Contact Our Team"
+        secondaryCtaHref="/#contact"
+        secondaryIcon="none"
+      />
     </>
   );
 }
