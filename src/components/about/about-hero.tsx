@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { Download } from "lucide-react";
 import { m } from "framer-motion";
 import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
@@ -24,9 +23,9 @@ export function AboutHero({
   heading = "Building Businesses That Are Ready For Tomorrow.",
   description = "KREBIG International Group partners with ambitious businesses to launch, grow, scale and transform through an integrated ecosystem of strategy, creativity, technology and artificial intelligence.",
   primaryCtaLabel = "Book Strategy Call",
-  primaryCtaHref = "/#contact",
-  secondaryCtaLabel = "Download Company Profile",
-  secondaryCtaHref = "/company-profile.pdf",
+  primaryCtaHref = "/contact",
+  secondaryCtaLabel = "Contact Our Team",
+  secondaryCtaHref = "/contact",
 }: AboutHeroProps) {
   return (
     <Section
@@ -65,10 +64,7 @@ export function AboutHero({
               <Link href={primaryCtaHref}>{primaryCtaLabel}</Link>
             </Button>
             <Button asChild size="lg" variant="outline">
-              <Link href={secondaryCtaHref}>
-                <Download aria-hidden="true" className="size-4" />
-                {secondaryCtaLabel}
-              </Link>
+              <Link href={secondaryCtaHref}>{secondaryCtaLabel}</Link>
             </Button>
           </m.div>
         </div>

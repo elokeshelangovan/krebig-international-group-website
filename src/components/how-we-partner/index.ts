@@ -5,3 +5,4 @@ export * from "./why-partner";
 export * from "./partnership-models";
 export * from "./partnership-journey";
 export * from "./partner-stats";
+export * from "./partnership-model-placeholder";

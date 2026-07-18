@@ -24,6 +24,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: new URL("/how-we-partner/launch", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: new URL("/how-we-partner/growth", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: new URL("/how-we-partner/scale", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: new URL("/how-we-partner/enterprise", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
       url: new URL("/divisions", siteConfig.url).toString(),
       lastModified: new Date(),
       changeFrequency: "monthly",

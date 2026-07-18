@@ -15,12 +15,8 @@ import {
   ShoppingBagIcon,
   FactoryIcon,
   BookOpenIcon,
-  BankIcon,
-  ShieldIcon,
-  TruckIcon,
-  CpuIcon,
-  OfficeTowerIcon,
 } from "@/components/sections/industries-icons";
+import { BriefcaseIcon } from "@/components/sections/divisions-icons";
 import type { IconProps } from "@/components/sections/services-icons";
 
 export interface Industry {
@@ -81,34 +77,10 @@ const defaultIndustries: Industry[] = [
     href: "/industries/education",
   },
   {
-    icon: BankIcon,
-    name: "Finance",
-    description: "Banks, fintech, investment firms and financial consulting.",
-    href: "/industries/finance",
-  },
-  {
-    icon: ShieldIcon,
-    name: "Government",
-    description: "Public sector, smart city initiatives and digital services.",
-    href: "/industries/government",
-  },
-  {
-    icon: TruckIcon,
-    name: "Logistics",
-    description: "Transportation, shipping and supply chain management.",
-    href: "/industries/logistics",
-  },
-  {
-    icon: CpuIcon,
-    name: "Technology",
-    description: "Software companies, SaaS platforms, AI startups and IT firms.",
-    href: "/industries/technology",
-  },
-  {
-    icon: OfficeTowerIcon,
-    name: "Corporate Enterprises",
-    description: "Large organizations seeking digital transformation and business growth.",
-    href: "/industries/corporate-enterprises",
+    icon: BriefcaseIcon,
+    name: "Professional Services",
+    description: "Consulting firms, legal practices, financial companies and business advisors.",
+    href: "/industries/professional-services",
   },
 ];
 

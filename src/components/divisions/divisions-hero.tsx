@@ -32,7 +32,7 @@ export function DivisionsHero({
   primaryCtaLabel = "Explore Our Divisions",
   primaryCtaHref = "#divisions-showcase",
   secondaryCtaLabel = "Contact Us",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "/contact",
 }: DivisionsHeroProps) {
   return (
     <Section

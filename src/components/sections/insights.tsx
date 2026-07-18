@@ -37,29 +37,29 @@ const defaultTopics: InsightTopic[] = [
     description:
       "Discover how AI is transforming marketing, operations, customer experience, and business growth.",
     ctaLabel: "Read More",
-    href: "/insights/ai-automation",
+    href: "/insights/category/ai-automation",
   },
   {
     icon: TrendingUp,
-    title: "Business Growth",
+    title: "Business Strategy",
     description:
       "Strategies, frameworks, and practical guides to help businesses launch, grow, and scale.",
     ctaLabel: "Read More",
-    href: "/insights/business-growth",
+    href: "/insights/category/business-strategy",
   },
   {
     icon: Newspaper,
     title: "Industry Insights",
     description: "Latest trends, market analysis, and opportunities across multiple industries.",
     ctaLabel: "Read More",
-    href: "/insights/industry-insights",
+    href: "/insights/category/industry-insights",
   },
   {
     icon: BookOpen,
-    title: "Resources & Guides",
-    description: "Download checklists, playbooks, frameworks, and implementation guides.",
-    ctaLabel: "Explore Resources",
-    href: "/resources",
+    title: "Innovation",
+    description: "Emerging technology, forward-thinking strategy, and what's next for business.",
+    ctaLabel: "Read More",
+    href: "/insights/category/innovation",
   },
 ];
 
@@ -72,7 +72,7 @@ export function Insights({
   primaryCtaLabel = "Visit Knowledge Hub",
   primaryCtaHref = "/insights",
   secondaryCtaLabel = "View All Articles",
-  secondaryCtaHref = "/insights/articles",
+  secondaryCtaHref = "/insights#latest-articles",
 }: InsightsProps) {
   const shouldReduceMotion = useReducedMotion();
 

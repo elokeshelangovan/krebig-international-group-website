@@ -5,6 +5,7 @@ import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import { CategoryPlaceholder } from "@/components/insights";
 import { defaultCategories } from "@/components/insights/data";
+import { Container, Breadcrumbs } from "@/components/layout";
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -49,18 +50,18 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   }
 
   const Icon = category.icon;
+  const breadcrumbItems = [
+    { name: "Home", url: siteConfig.url },
+    { name: "Insights", url: new URL("/insights", siteConfig.url).toString() },
+    { name: category.name, url: new URL(category.href, siteConfig.url).toString() },
+  ];
 
   return (
     <>
-      <script
-        {...jsonLdScriptProps(
-          breadcrumbSchema([
-            { name: "Home", url: siteConfig.url },
-            { name: "Insights", url: new URL("/insights", siteConfig.url).toString() },
-            { name: category.name, url: new URL(category.href, siteConfig.url).toString() },
-          ]),
-        )}
-      />
+      <script {...jsonLdScriptProps(breadcrumbSchema(breadcrumbItems))} />
+      <Container size="lg" className="pt-6">
+        <Breadcrumbs items={breadcrumbItems} />
+      </Container>
       <CategoryPlaceholder
         icon={<Icon className="size-8" />}
         name={category.name}

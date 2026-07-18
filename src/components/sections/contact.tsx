@@ -2,7 +2,7 @@
 
 import type { FormEvent } from "react";
 import type { LucideIcon } from "lucide-react";
-import { MapPin, Mail, Phone, Clock, Download } from "lucide-react";
+import { MapPin, Mail, Phone, Clock } from "lucide-react";
 import Link from "next/link";
 import { m } from "framer-motion";
 import { Section } from "@/components/layout/section";
@@ -123,8 +123,8 @@ export function Contact({
   bandDescription = "Partner with KREBIG to combine strategy, creativity, technology, and AI into one powerful growth engine.",
   bandPrimaryCtaLabel = "Book Your Strategy Call",
   bandPrimaryCtaHref = "/#contact",
-  bandSecondaryCtaLabel = "Download Company Profile",
-  bandSecondaryCtaHref = "/company-profile.pdf",
+  bandSecondaryCtaLabel = "Contact Our Team",
+  bandSecondaryCtaHref = "/contact",
 }: ContactProps) {
   return (
     <Section id="contact" aria-label="Contact" tone="muted" spacing="xl" containerSize="lg">
@@ -290,10 +290,7 @@ export function Contact({
             variant="outline"
             className="border-white/30 bg-transparent text-white hover:bg-white/10 hover:text-white"
           >
-            <Link href={bandSecondaryCtaHref}>
-              <Download aria-hidden="true" className="size-4" />
-              {bandSecondaryCtaLabel}
-            </Link>
+            <Link href={bandSecondaryCtaHref}>{bandSecondaryCtaLabel}</Link>
           </Button>
         </m.div>
       </m.div>

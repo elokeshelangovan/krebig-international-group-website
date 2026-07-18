@@ -23,7 +23,7 @@ export function PartnerHero({
   heading = "Partnerships Built for Sustainable Business Growth",
   description = "Every business is at a different stage of growth. Our partnership model is designed to help you launch, grow, scale, and transform with the right strategy, technology, creativity, and execution.",
   primaryCtaLabel = "Book a Consultation",
-  primaryCtaHref = "/#contact",
+  primaryCtaHref = "/contact",
   secondaryCtaLabel = "Explore Partnership Models",
   secondaryCtaHref = "#partnership-models",
 }: PartnerHeroProps) {

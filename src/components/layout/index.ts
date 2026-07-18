@@ -1,5 +1,6 @@
 export * from "./container";
 export * from "./section";
+export * from "./breadcrumbs";
 export * from "./announcement-bar";
 export * from "./navbar";
 export * from "./footer";

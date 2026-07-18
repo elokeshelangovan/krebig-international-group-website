@@ -1,18 +1,9 @@
 "use client";
 
 import type { ComponentType } from "react";
-import Link from "next/link";
 import { m, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/layout/section";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,
-  CardFooter,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Heading, Text } from "@/components/ui/typography";
 import { AnimatedCounter } from "@/components/ui/animated-counter";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
@@ -26,7 +17,6 @@ export interface CaseStudy {
   description: string;
   metricValue: string;
   metricLabel: string;
-  href: string;
 }
 
 export interface PortfolioStat {
@@ -53,7 +43,6 @@ const defaultCaseStudies: CaseStudy[] = [
       "Enterprise digital marketing and lead generation strategy for a premium property developer.",
     metricValue: "+240%",
     metricLabel: "Qualified Leads",
-    href: "/portfolio/luxury-real-estate-marketing",
   },
   {
     icon: PulseIcon,
@@ -63,7 +52,6 @@ const defaultCaseStudies: CaseStudy[] = [
       "Modern website, AI automation and patient acquisition strategy for a healthcare organization.",
     metricValue: "+180%",
     metricLabel: "Patient Enquiries",
-    href: "/portfolio/healthcare-digital-transformation",
   },
   {
     icon: SparklesIcon,
@@ -72,7 +60,6 @@ const defaultCaseStudies: CaseStudy[] = [
     description: "AI workflow automation reducing manual operations and increasing productivity.",
     metricValue: "65%",
     metricLabel: "Time Saved",
-    href: "/portfolio/ai-business-automation",
   },
 ];
 
@@ -187,12 +174,6 @@ export function Portfolio({
                     <span className="text-muted-foreground text-sm">{caseStudy.metricLabel}</span>
                   </div>
                 </CardContent>
-
-                <CardFooter>
-                  <Button asChild variant="outline" size="sm">
-                    <Link href={caseStudy.href}>View Case Study</Link>
-                  </Button>
-                </CardFooter>
               </Card>
             </m.div>
           );

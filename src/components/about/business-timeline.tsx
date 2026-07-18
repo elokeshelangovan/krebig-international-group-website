@@ -60,9 +60,9 @@ export function BusinessTimeline({
   milestones = defaultMilestones,
   ctaHeading = "Great Businesses Are Built On Strong Foundations",
   primaryCtaLabel = "Explore Our Approach",
-  primaryCtaHref = "/approach",
+  primaryCtaHref = "/how-we-partner",
   secondaryCtaLabel = "Book Strategy Call",
-  secondaryCtaHref = "/#contact",
+  secondaryCtaHref = "/contact",
 }: BusinessTimelineProps) {
   return (
     <Section

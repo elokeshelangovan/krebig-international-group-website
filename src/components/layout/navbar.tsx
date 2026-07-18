@@ -100,6 +100,7 @@ export function Navbar({
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [hoveredHref, setHoveredHref] = React.useState<string | null>(null);
   const menuId = React.useId();
+  const menuButtonRef = React.useRef<HTMLButtonElement>(null);
   const pathname = usePathname();
   const shouldReduceMotion = useReducedMotion();
 
@@ -109,6 +110,18 @@ export function Navbar({
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  React.useEffect(() => {
+    if (!isMenuOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, [isMenuOpen]);
 
   const highlightTransition = shouldReduceMotion
     ? { duration: 0 }
@@ -168,6 +181,7 @@ export function Navbar({
           </nav>
 
           <Button
+            ref={menuButtonRef}
             type="button"
             variant="ghost"
             size="icon"

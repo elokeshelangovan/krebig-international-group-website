@@ -25,10 +25,10 @@ export function FinalCta({
   heading = "Let's Build Your Next Growth Story",
   description = "Whether you're launching a new business, accelerating growth or preparing for enterprise transformation, KREBIG is ready to partner with you.",
   primaryCtaLabel = "Book Strategy Call",
-  primaryCtaHref = "/#contact",
-  secondaryCtaLabel = "Download Company Profile",
-  secondaryCtaHref = "/company-profile.pdf",
-  secondaryIcon = "download",
+  primaryCtaHref = "/contact",
+  secondaryCtaLabel = "Contact Our Team",
+  secondaryCtaHref = "/contact",
+  secondaryIcon = "none",
 }: FinalCtaProps) {
   const SecondaryIcon = secondaryIcons[secondaryIcon];
   return (

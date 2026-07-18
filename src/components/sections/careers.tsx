@@ -69,21 +69,21 @@ const defaultRoles: OpenRole[] = [
     department: "Digital Media",
     location: "Dubai, UAE",
     employmentType: "Full-time",
-    href: "/careers/digital-marketing-specialist",
+    href: "/careers/apply/digital-marketing-specialist",
   },
   {
     title: "AI Automation Engineer",
     department: "Technology",
-    location: "Chennai, India",
-    employmentType: "Full-time",
-    href: "/careers/ai-automation-engineer",
-  },
-  {
-    title: "Creative Designer",
-    department: "Creative Studio",
     location: "Remote",
     employmentType: "Full-time",
-    href: "/careers/creative-designer",
+    href: "/careers/apply/ai-automation-engineer",
+  },
+  {
+    title: "Video Editor & Motion Designer",
+    department: "Creative Studio",
+    location: "Dubai, UAE",
+    employmentType: "Full-time",
+    href: "/careers/apply/video-editor-motion-designer",
   },
 ];
 
@@ -98,7 +98,7 @@ export function Careers({
   primaryCtaLabel = "View Open Positions",
   primaryCtaHref = "/careers",
   secondaryCtaLabel = "Join Our Talent Network",
-  secondaryCtaHref = "/careers/talent-network",
+  secondaryCtaHref = "/contact",
 }: CareersProps) {
   const shouldReduceMotion = useReducedMotion();
 

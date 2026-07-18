@@ -64,9 +64,9 @@ export default function InsightsPage() {
         heading="Ready to Turn Insights into Business Growth?"
         description="Reading is only the beginning. Partner with KREBIG to transform ideas, strategies, and innovation into measurable business results through integrated expertise in strategy, creativity, technology, and AI."
         primaryCtaLabel="Book a Strategy Session"
-        primaryCtaHref="/#contact"
+        primaryCtaHref="/contact"
         secondaryCtaLabel="Contact Our Experts"
-        secondaryCtaHref="/#contact"
+        secondaryCtaHref="/contact"
         secondaryIcon="none"
       />
     </>
