@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
-import { CareersHero, WhyJoinKrebig, LifeAtKrebig } from "@/components/careers";
+import {
+  CareersHero,
+  WhyJoinKrebig,
+  LifeAtKrebig,
+  OpenOpportunities,
+  HiringProcess,
+  BenefitsGrowth,
+} from "@/components/careers";
 
 export const metadata: Metadata = buildMetadata({
   fullTitle: "Careers at KREBIG | Build Your Future in Business Growth",
@@ -25,6 +32,9 @@ export default function CareersPage() {
       <CareersHero />
       <WhyJoinKrebig />
       <LifeAtKrebig />
+      <OpenOpportunities />
+      <HiringProcess />
+      <BenefitsGrowth />
     </>
   );
 }
