@@ -2,7 +2,14 @@ import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
-import { InsightsHero, FeaturedInsights, InsightsTopics } from "@/components/insights";
+import {
+  InsightsHero,
+  FeaturedInsights,
+  InsightsTopics,
+  LatestArticles,
+  BrowseByCategory,
+  InsightsNewsletter,
+} from "@/components/insights";
 
 export const metadata: Metadata = buildMetadata({
   fullTitle: "Insights | KREBIG International Group",
@@ -25,6 +32,9 @@ export default function InsightsPage() {
       <InsightsHero />
       <FeaturedInsights />
       <InsightsTopics />
+      <LatestArticles />
+      <BrowseByCategory />
+      <InsightsNewsletter />
     </>
   );
 }
