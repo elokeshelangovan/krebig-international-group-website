@@ -1,6 +1,5 @@
 "use client";
 
-import type { ComponentType } from "react";
 import Link from "next/link";
 import { Briefcase, MapPin, Clock } from "lucide-react";
 import { m, useReducedMotion } from "framer-motion";
@@ -9,27 +8,10 @@ import { Card, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
-import { MegaphoneIcon, PenToolIcon, type IconProps } from "@/components/sections/services-icons";
-import { CodeIcon, FilmIcon, BriefcaseIcon } from "@/components/sections/divisions-icons";
-import { CpuIcon } from "@/components/sections/industries-icons";
+import { defaultPositions, type OpenPosition } from "./data";
 
-/**
- * `slug`, `departmentSlug`, and `locationType` are future-ready for an ATS
- * integration and department/location filtering; `href` currently points
- * to the general contact section until an online application flow exists.
- */
-export interface OpenPosition {
-  slug: string;
-  icon: ComponentType<IconProps>;
-  title: string;
-  employmentType: string;
-  location: string;
-  locationType: "on-site" | "hybrid" | "remote";
-  department: string;
-  departmentSlug: string;
-  summary: string;
-  href: string;
-}
+export type { OpenPosition };
+export { defaultPositions };
 
 export interface OpenOpportunitiesProps {
   eyebrow?: string;
@@ -37,85 +19,6 @@ export interface OpenOpportunitiesProps {
   description?: string;
   positions?: OpenPosition[];
 }
-
-const defaultPositions: OpenPosition[] = [
-  {
-    slug: "digital-marketing-specialist",
-    icon: MegaphoneIcon,
-    title: "Digital Marketing Specialist",
-    employmentType: "Full-Time",
-    location: "Dubai, UAE",
-    locationType: "on-site",
-    department: "Digital Media",
-    departmentSlug: "digital-media",
-    summary:
-      "Plan and execute performance-driven campaigns across paid, organic, and social channels for KREBIG clients.",
-    href: "/#contact",
-  },
-  {
-    slug: "ui-ux-designer",
-    icon: PenToolIcon,
-    title: "UI/UX Designer",
-    employmentType: "Full-Time",
-    location: "Hybrid",
-    locationType: "hybrid",
-    department: "Creative Studio",
-    departmentSlug: "studio",
-    summary:
-      "Design intuitive, on-brand digital experiences across web, product, and marketing surfaces.",
-    href: "/#contact",
-  },
-  {
-    slug: "full-stack-developer",
-    icon: CodeIcon,
-    title: "Full Stack Developer",
-    employmentType: "Full-Time",
-    location: "Hybrid",
-    locationType: "hybrid",
-    department: "Technology",
-    departmentSlug: "technology",
-    summary:
-      "Build and ship scalable web applications and business systems using modern frameworks.",
-    href: "/#contact",
-  },
-  {
-    slug: "ai-automation-engineer",
-    icon: CpuIcon,
-    title: "AI Automation Engineer",
-    employmentType: "Full-Time",
-    location: "Remote",
-    locationType: "remote",
-    department: "Technology",
-    departmentSlug: "technology",
-    summary:
-      "Design and deploy AI-driven automation that streamlines business operations for clients.",
-    href: "/#contact",
-  },
-  {
-    slug: "video-editor-motion-designer",
-    icon: FilmIcon,
-    title: "Video Editor & Motion Designer",
-    employmentType: "Full-Time",
-    location: "Dubai, UAE",
-    locationType: "on-site",
-    department: "Creative Studio",
-    departmentSlug: "studio",
-    summary: "Create polished video content and motion graphics for brand and campaign work.",
-    href: "/#contact",
-  },
-  {
-    slug: "business-development-executive",
-    icon: BriefcaseIcon,
-    title: "Business Development Executive",
-    employmentType: "Full-Time",
-    location: "Dubai, UAE",
-    locationType: "on-site",
-    department: "Business Strategy",
-    departmentSlug: "business-strategy",
-    summary: "Identify new business opportunities and build lasting client relationships.",
-    href: "/#contact",
-  },
-];
 
 export function OpenOpportunities({
   eyebrow = "Open Opportunities",
