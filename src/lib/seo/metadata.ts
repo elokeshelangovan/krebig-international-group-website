@@ -35,11 +35,13 @@ export function buildMetadata({
       siteName: siteConfig.name,
       locale: siteConfig.locale,
       type: "website",
+      images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
       title: pageTitle,
       description,
+      images: ["/twitter-image"],
     },
     robots: noIndex ? { index: false, follow: false } : { index: true, follow: true },
   };

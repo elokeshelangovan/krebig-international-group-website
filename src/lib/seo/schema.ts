@@ -157,6 +157,50 @@ export interface BlogPostingItem {
   author: string;
 }
 
+export interface ArticleSchemaOptions {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  author: string;
+}
+
+/** BlogPosting schema for a single article page, distinct from the aggregate blogSchema() used on the /insights index. */
+export function articleSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  author,
+}: ArticleSchemaOptions) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: title,
+    description,
+    url,
+    datePublished,
+    author: {
+      "@type": "Organization",
+      name: author,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+    isPartOf: {
+      "@type": "Blog",
+      name: `${siteConfig.name} Insights`,
+      url: new URL("/insights", siteConfig.url).toString(),
+    },
+  };
+}
+
 export function blogSchema(posts: BlogPostingItem[]) {
   return {
     "@context": "https://schema.org",

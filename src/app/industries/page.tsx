@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
+import { jsonLdScriptProps, breadcrumbSchema, webPageSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import {
   IndustrySolutionsHero,
@@ -28,6 +28,16 @@ export default function IndustrySolutionsPage() {
             { name: "Home", url: siteConfig.url },
             { name: "Industry Solutions", url: new URL("/industries", siteConfig.url).toString() },
           ]),
+        )}
+      />
+      <script
+        {...jsonLdScriptProps(
+          webPageSchema({
+            name: "KREBIG Industry Solutions | Real Estate, Healthcare, Retail & More",
+            description:
+              "KREBIG delivers industry-specific solutions across real estate, healthcare, technology and more — combining strategy, creativity and AI for measurable growth.",
+            url: new URL("/industries", siteConfig.url).toString(),
+          }),
         )}
       />
       <IndustrySolutionsHero />

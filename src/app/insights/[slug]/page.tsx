@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { buildMetadata } from "@/lib/seo/metadata";
-import { jsonLdScriptProps, breadcrumbSchema } from "@/lib/seo/schema";
+import { jsonLdScriptProps, breadcrumbSchema, articleSchema } from "@/lib/seo/schema";
 import { siteConfig } from "@/config/site";
 import { ArticlePlaceholder } from "@/components/insights";
 import { defaultArticles } from "@/components/insights/data";
@@ -59,6 +59,17 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   return (
     <>
       <script {...jsonLdScriptProps(breadcrumbSchema(breadcrumbItems))} />
+      <script
+        {...jsonLdScriptProps(
+          articleSchema({
+            title: article.title,
+            description: article.summary,
+            url: new URL(article.href, siteConfig.url).toString(),
+            datePublished: article.publishedAt,
+            author: article.author,
+          }),
+        )}
+      />
       <Container size="lg" className="pt-6">
         <Breadcrumbs items={breadcrumbItems} />
       </Container>
