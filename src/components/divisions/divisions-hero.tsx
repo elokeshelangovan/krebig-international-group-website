@@ -7,6 +7,7 @@ import { Section } from "@/components/layout/section";
 import { Button } from "@/components/ui/button";
 import { Heading, Text } from "@/components/ui/typography";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
+import { duration, easing } from "@/lib/motion/tokens";
 import { DivisionsHeroVisual } from "@/components/divisions/divisions-hero-visual";
 
 export interface DivisionsHeroProps {
@@ -56,7 +57,13 @@ export function DivisionsHero({
             {eyebrow}
           </m.span>
 
-          <m.div variants={fadeInUp}>
+          {/* Animated independently (not via the container's stagger) so the
+              LCP-critical heading paints at full opacity as early as possible. */}
+          <m.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: duration.base, ease: easing.out }}
+          >
             <Heading level={1}>{heading}</Heading>
           </m.div>
 

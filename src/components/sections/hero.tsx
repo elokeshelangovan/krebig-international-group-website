@@ -8,7 +8,7 @@ import { Heading, Text } from "@/components/ui/typography";
 import { HeroVisual } from "@/components/sections/hero-visual";
 import { HeroBackground } from "@/components/sections/hero-background";
 import { staggerContainer, fadeInUp } from "@/lib/motion/variants";
-import { easing } from "@/lib/motion/tokens";
+import { duration, easing } from "@/lib/motion/tokens";
 
 export interface HeroCta {
   label: string;
@@ -65,7 +65,13 @@ export function Hero({
               {eyebrow}
             </m.span>
 
-            <m.div variants={fadeInUp}>
+            {/* Animated independently (not via the container's stagger) so the
+                LCP-critical heading paints at full opacity as early as possible. */}
+            <m.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: duration.base, ease: easing.out }}
+            >
               <Heading level={1} className="text-white">
                 {heading}
               </Heading>
