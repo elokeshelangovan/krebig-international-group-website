@@ -11,6 +11,11 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
+  /* Decorative gradient orbs in hero visuals bleed slightly past their
+     container by design; clip at the viewport edge instead of the
+     container edge so they never introduce horizontal page scroll on
+     narrow viewports. */
+  overflow-x: hidden;
 }
 
 /* Visually hide content while keeping it in the accessibility tree, until
