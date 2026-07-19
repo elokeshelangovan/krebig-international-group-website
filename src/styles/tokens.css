@@ -16,13 +16,17 @@
   --popover: #ffffff;
   --popover-foreground: #171717;
 
-  /* Brand */
-  --primary: #4338ca;
+  /* Brand — extracted from the official KREBIG logo (pixel-sampled from the
+     brushed-metal wordmark render): red #63131d, charcoal #545a58. Tints,
+     shades, and dark-mode variants below are derived from those two base
+     colors, not invented values; see the PH-branding sprint for the
+     extraction + WCAG contrast verification. */
+  --primary: #63131d;
   --primary-foreground: #f8fafc;
   --secondary: #f1f5f9;
   --secondary-foreground: #0f172a;
-  --accent: #eef2ff;
-  --accent-foreground: #3730a3;
+  --accent: #f4f5f5;
+  --accent-foreground: #1e201f;
 
   /* Neutral / UI */
   --muted: #f4f4f5;
@@ -31,7 +35,7 @@
   --muted-foreground: #52525b;
   --border: #e4e4e7;
   --input: #e4e4e7;
-  --ring: #4338ca;
+  --ring: #63131d;
 
   /* Feedback */
   --destructive: #dc2626;
@@ -57,18 +61,20 @@
     --popover: #111113;
     --popover-foreground: #ededed;
 
-    --primary: #818cf8;
+    /* Brightened from the base #63131d red so body-text-weight usage still
+       clears 4.5:1 against the near-black dark-mode background. */
+    --primary: #dc485a;
     --primary-foreground: #0a0a0a;
     --secondary: #1f1f23;
     --secondary-foreground: #ededed;
-    --accent: #1e1b4b;
-    --accent-foreground: #c7d2fe;
+    --accent: #2c2f2e;
+    --accent-foreground: #d7dad9;
 
     --muted: #18181b;
     --muted-foreground: #a1a1aa;
     --border: #27272a;
     --input: #27272a;
-    --ring: #818cf8;
+    --ring: #dc485a;
 
     --destructive: #f87171;
     --destructive-foreground: #450a0a;

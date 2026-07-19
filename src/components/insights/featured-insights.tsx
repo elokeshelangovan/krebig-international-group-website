@@ -91,7 +91,7 @@ export function FeaturedInsights({
           transition={{ type: "spring", stiffness: 300, damping: 24 }}
         >
           <Card className="hover:shadow-modal duration-base ease-standard mx-auto grid max-w-5xl overflow-hidden transition-shadow lg:grid-cols-2">
-            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-950 lg:aspect-auto">
+            <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950 lg:aspect-auto">
               <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">
                 <defs>
                   <pattern

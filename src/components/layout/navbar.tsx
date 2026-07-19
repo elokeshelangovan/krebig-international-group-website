@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { m, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -13,7 +14,7 @@ import { primaryNav, primaryNavCta, type NavItem } from "@/config/navigation";
 import { siteConfig } from "@/config/site";
 
 export interface NavbarProps {
-  logo?: React.ReactNode;
+  logo?: string;
   items?: NavItem[];
   cta?: NavItem | null;
   className?: string;
@@ -53,32 +54,31 @@ function NavLink({
   );
 }
 
-function Logo({ label }: { label: React.ReactNode }) {
+function Logo({ label }: { label: string }) {
   return (
-    // The site name text is hidden below the `xs` breakpoint, which would
-    // otherwise leave this link with no accessible name at narrow widths.
-    // Between `xs` and `xl` the full name is replaced with the short name:
-    // at the `lg` breakpoint (1024px) there isn't enough room for the full
-    // primary nav plus "KREBIG International Group" on one line.
-    <Link href="/" aria-label={siteConfig.name} className="flex items-center gap-2.5">
-      <span
+    // Below `xl` there isn't reliably enough room next to the full primary
+    // nav for the wide "KREBIG" wordmark (see the lg-breakpoint overflow
+    // fix in navbar history), so the compact "KR" mark is used instead;
+    // the full wordmark only appears from `xl` (1280px) up.
+    <Link href="/" aria-label={label} className="flex items-center">
+      <Image
+        src="/brand/krebig-icon-mark.png"
+        alt=""
         aria-hidden="true"
-        className="bg-primary text-primary-foreground flex size-8 shrink-0 items-center justify-center rounded-md text-sm font-bold"
-      >
-        {siteConfig.shortName.charAt(0)}
-      </span>
-      <span
+        width={345}
+        height={225}
+        priority
+        className="h-8 w-auto xl:hidden"
+      />
+      <Image
+        src="/brand/krebig-logo-wordmark.png"
+        alt=""
         aria-hidden="true"
-        className="xs:inline hidden text-base font-semibold tracking-tight whitespace-nowrap xl:hidden"
-      >
-        {siteConfig.shortName}
-      </span>
-      <span
-        aria-hidden="true"
-        className="hidden text-base font-semibold tracking-tight whitespace-nowrap xl:inline"
-      >
-        {label}
-      </span>
+        width={870}
+        height={225}
+        priority
+        className="hidden h-8 w-auto xl:block"
+      />
     </Link>
   );
 }

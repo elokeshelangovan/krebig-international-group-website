@@ -76,7 +76,7 @@ export function LatestArticles({
               className="group"
             >
               <Card className="hover:border-primary/30 hover:shadow-dropdown duration-base ease-standard flex h-full flex-col overflow-hidden transition-[border-color,box-shadow]">
-                <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 to-indigo-950">
+                <div className="relative flex aspect-video items-center justify-center overflow-hidden bg-gradient-to-br from-neutral-700 to-neutral-950">
                   <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">
                     <defs>
                       <pattern

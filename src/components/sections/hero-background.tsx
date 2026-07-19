@@ -53,9 +53,9 @@ function SkylineFallback() {
     >
       <defs>
         <linearGradient id="hero-sky-gradient" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#0b1029" />
-          <stop offset="55%" stopColor="#151b3d" />
-          <stop offset="100%" stopColor="#1f2757" />
+          <stop offset="0%" stopColor="#0a0a0a" />
+          <stop offset="55%" stopColor="#171717" />
+          <stop offset="100%" stopColor="#262626" />
         </linearGradient>
         <linearGradient id="hero-glow-gradient" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="var(--color-primary)" stopOpacity="0.35" />
@@ -77,7 +77,7 @@ function SkylineFallback() {
           y={400 - building.height}
           width={building.width}
           height={building.height}
-          fill="#0a0e24"
+          fill="#0a0a0a"
           opacity="0.85"
         />
       ))}

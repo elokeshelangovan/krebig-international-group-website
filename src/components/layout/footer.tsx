@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { m, useReducedMotion } from "framer-motion";
 import { Container } from "@/components/layout/container";
@@ -19,7 +20,7 @@ import {
 import { siteConfig } from "@/config/site";
 
 export interface FooterProps {
-  logo?: React.ReactNode;
+  logo?: string;
   description?: string;
   columns?: FooterColumn[];
   socials?: SocialLink[];
@@ -53,7 +54,7 @@ export function Footer({
   return (
     <footer className={cn("bg-neutral-950 text-neutral-300", className)}>
       {/* Top CTA strip */}
-      <div className="border-b border-white/10 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-950">
+      <div className="border-b border-white/10 bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-950">
         <Container size="lg">
           <m.div
             className="flex flex-col items-center gap-6 py-16 text-center lg:py-20"
@@ -68,12 +69,12 @@ export function Footer({
               </Heading>
             </m.div>
             <m.div variants={fadeInUp}>
-              <Text variant="lead" className="max-w-2xl text-pretty text-indigo-100">
+              <Text variant="lead" className="max-w-2xl text-pretty text-neutral-300">
                 {ctaDescription}
               </Text>
             </m.div>
             <m.div variants={fadeInUp} className="flex flex-col items-center gap-4 sm:flex-row">
-              <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
+              <Button asChild size="lg" className="text-primary bg-white hover:bg-neutral-100">
                 <Link href={ctaPrimaryHref}>{ctaPrimaryLabel}</Link>
               </Button>
               <Button
@@ -102,7 +103,13 @@ export function Footer({
             variants={fadeInUp}
             className="col-span-2 flex flex-col gap-4 sm:col-span-3 lg:col-span-2"
           >
-            <span className="text-lg font-semibold tracking-tight text-white">{logo}</span>
+            <Image
+              src="/brand/krebig-logo-wordmark.png"
+              alt={logo}
+              width={870}
+              height={225}
+              className="h-8 w-auto"
+            />
             <Text variant="small" className="max-w-xs text-pretty text-neutral-400">
               {description}
             </Text>

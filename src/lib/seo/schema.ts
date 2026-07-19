@@ -17,6 +17,7 @@ export function organizationSchema() {
     name: siteConfig.name,
     url: siteConfig.url,
     description: siteConfig.description,
+    logo: new URL("/brand/krebig-logo-full.png", siteConfig.url).toString(),
     ...(socialLinks.length > 0 ? { sameAs: socialLinks.map((social) => social.href) } : {}),
   };
 }
