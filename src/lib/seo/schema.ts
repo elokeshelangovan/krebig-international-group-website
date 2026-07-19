@@ -141,7 +141,8 @@ export function contactPageSchema({ name, description, url }: ContactPageSchemaO
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer service",
-        email: "hello@krebig.com",
+        telephone: "+971-56-783-6566",
+        email: "info@krebiginternationalgroup.com",
         areaServed: "Worldwide",
         availableLanguage: "English",
       },

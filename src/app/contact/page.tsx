@@ -52,7 +52,7 @@ export default function ContactPage() {
         primaryCtaLabel="Book a Consultation"
         primaryCtaHref="#contact-form"
         secondaryCtaLabel="Email Our Team"
-        secondaryCtaHref="mailto:hello@krebig.com"
+        secondaryCtaHref="mailto:info@krebiginternationalgroup.com"
         secondaryIcon="none"
       />
     </>

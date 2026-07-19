@@ -50,7 +50,7 @@ export function ScheduleConsultationPlaceholder() {
         </m.div>
         <m.div variants={fadeInUp} className="mt-4 flex flex-col items-center gap-4 sm:flex-row">
           <Button asChild size="lg">
-            <Link href="mailto:hello@krebig.com">Email Our Team</Link>
+            <Link href="mailto:info@krebiginternationalgroup.com">Email Our Team</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
             <Link href="/contact">Back to Contact</Link>

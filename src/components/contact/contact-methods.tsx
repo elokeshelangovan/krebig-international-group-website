@@ -13,8 +13,9 @@ import { BriefcaseIcon, GraduationCapIcon } from "@/components/sections/division
 import { TrendingUpIcon, type IconProps } from "@/components/sections/services-icons";
 
 /**
- * `href` uses `mailto:` placeholders for channels without a dedicated page
- * yet; Careers already has a real route, so it links there directly.
+ * `href` uses the shared official `mailto:` for channels without a
+ * dedicated page yet; Careers already has a real route, so it links
+ * there directly.
  */
 export interface ContactMethod {
   icon: ComponentType<IconProps>;
@@ -37,14 +38,14 @@ const defaultMethods: ContactMethod[] = [
     title: "Business Enquiries",
     description: "For partnerships, projects, and general business discussions.",
     ctaLabel: "Email Business Team",
-    href: "mailto:business@krebig.com",
+    href: "mailto:info@krebiginternationalgroup.com",
   },
   {
     icon: TrendingUpIcon,
     title: "Sales",
     description: "For service-related enquiries and business growth consultations.",
     ctaLabel: "Email Sales Team",
-    href: "mailto:sales@krebig.com",
+    href: "mailto:info@krebiginternationalgroup.com",
   },
   {
     icon: GraduationCapIcon,
@@ -58,7 +59,7 @@ const defaultMethods: ContactMethod[] = [
     title: "Support",
     description: "For existing client assistance and technical support.",
     ctaLabel: "Email Support Team",
-    href: "mailto:support@krebig.com",
+    href: "mailto:info@krebiginternationalgroup.com",
   },
 ];
 

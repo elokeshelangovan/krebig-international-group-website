@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { siteConfig } from "@/config/site";
-import { defaultArticles, defaultCategories } from "@/components/insights/data";
-import { defaultPositions } from "@/components/careers/data";
+import { defaultArticles } from "@/components/insights/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -143,53 +142,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly" as const,
       priority: 0.5,
     })),
-    ...defaultCategories.map((category) => ({
-      url: new URL(category.href, siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    })),
     {
       url: new URL("/careers", siteConfig.url).toString(),
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 0.8,
     },
-    ...defaultPositions.map((position) => ({
-      url: new URL(position.href, siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.5,
-    })),
     {
       url: new URL("/contact", siteConfig.url).toString(),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
-    },
-    {
-      url: new URL("/contact/schedule-consultation", siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.5,
-    },
-    {
-      url: new URL("/legal/privacy-policy", siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: new URL("/legal/terms-of-service", siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: new URL("/legal/cookie-policy", siteConfig.url).toString(),
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
     },
   ];
 }

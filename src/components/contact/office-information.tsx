@@ -37,13 +37,14 @@ const defaultDetails: OfficeDetail[] = [
   {
     icon: Mail,
     label: "Email",
-    lines: ["hello@krebig.com"],
-    href: "mailto:hello@krebig.com",
+    lines: ["info@krebiginternationalgroup.com"],
+    href: "mailto:info@krebiginternationalgroup.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    lines: ["+971 XX XXX XXXX"],
+    lines: ["+971 56 783 6566"],
+    href: "tel:+971567836566",
   },
 ];
 
