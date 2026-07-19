@@ -86,8 +86,8 @@ export function LifeAtKrebig({
               className={index === 0 ? "col-span-2 lg:col-span-1" : undefined}
             >
               <div
-                className={`group hover:shadow-modal duration-base ease-standard relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-600 to-indigo-950 transition-shadow ${
-                  index % 2 === 1 ? "from-indigo-950 to-indigo-600" : ""
+                className={`group hover:shadow-modal duration-base ease-standard relative flex aspect-[4/3] items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-700 to-neutral-950 transition-shadow ${
+                  index % 2 === 1 ? "from-neutral-950 to-neutral-700" : ""
                 }`}
               >
                 <svg aria-hidden="true" className="absolute inset-0 h-full w-full opacity-20">

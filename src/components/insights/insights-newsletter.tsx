@@ -43,7 +43,7 @@ export function InsightsNewsletter({
       containerSize="lg"
     >
       <m.div
-        className="rounded-card mx-auto flex max-w-3xl flex-col items-center gap-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-950 p-8 text-center lg:p-14"
+        className="rounded-card mx-auto flex max-w-3xl flex-col items-center gap-6 bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-950 p-8 text-center lg:p-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
@@ -62,7 +62,7 @@ export function InsightsNewsletter({
           </Heading>
         </m.div>
         <m.div variants={fadeInUp}>
-          <Text variant="lead" className="max-w-xl text-pretty text-indigo-100">
+          <Text variant="lead" className="max-w-xl text-pretty text-neutral-300">
             {description}
           </Text>
         </m.div>
@@ -96,7 +96,7 @@ export function InsightsNewsletter({
               <Button
                 type="submit"
                 size="lg"
-                className="shrink-0 bg-white text-indigo-700 hover:bg-indigo-50"
+                className="text-primary shrink-0 bg-white hover:bg-neutral-100"
               >
                 {ctaLabel}
               </Button>

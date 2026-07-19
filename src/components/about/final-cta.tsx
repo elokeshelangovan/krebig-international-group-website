@@ -34,7 +34,7 @@ export function FinalCta({
   return (
     <Section id="final-cta" aria-label={heading} tone="default" spacing="xl" containerSize="lg">
       <m.div
-        className="rounded-card flex flex-col items-center gap-6 bg-gradient-to-br from-indigo-600 via-indigo-700 to-indigo-950 p-8 text-center lg:p-14"
+        className="rounded-card flex flex-col items-center gap-6 bg-gradient-to-br from-neutral-700 via-neutral-800 to-neutral-950 p-8 text-center lg:p-14"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
@@ -46,12 +46,12 @@ export function FinalCta({
           </Heading>
         </m.div>
         <m.div variants={fadeInUp}>
-          <Text variant="lead" className="max-w-2xl text-pretty text-indigo-100">
+          <Text variant="lead" className="max-w-2xl text-pretty text-neutral-300">
             {description}
           </Text>
         </m.div>
         <m.div variants={fadeInUp} className="flex flex-col items-center gap-4 sm:flex-row">
-          <Button asChild size="lg" className="bg-white text-indigo-700 hover:bg-indigo-50">
+          <Button asChild size="lg" className="text-primary bg-white hover:bg-neutral-100">
             <Link href={primaryCtaHref}>{primaryCtaLabel}</Link>
           </Button>
           <Button
