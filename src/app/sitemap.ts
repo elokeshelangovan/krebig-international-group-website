@@ -167,5 +167,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
+    {
+      url: new URL("/contact/schedule-consultation", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: new URL("/legal/privacy-policy", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: new URL("/legal/terms-of-service", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
+    {
+      url: new URL("/legal/cookie-policy", siteConfig.url).toString(),
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.3,
+    },
   ];
 }
