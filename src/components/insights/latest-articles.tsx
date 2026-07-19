@@ -123,6 +123,7 @@ export function LatestArticles({
                 <CardFooter>
                   <Link
                     href={article.href}
+                    aria-label={`Read Article: ${article.title}`}
                     className="group/link text-primary duration-fast ease-standard hover:text-primary/80 inline-flex items-center gap-1.5 text-sm font-semibold transition-colors"
                   >
                     Read Article

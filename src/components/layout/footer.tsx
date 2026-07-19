@@ -119,7 +119,7 @@ export function Footer({
                         aria-label={social.label}
                         whileHover={shouldReduceMotion ? undefined : { y: -3 }}
                         transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                        className="border-input/20 duration-fast ease-standard flex size-9 items-center justify-center rounded-full border text-neutral-400 transition-colors hover:border-white/30 hover:bg-white/5 hover:text-white"
+                        className="border-input/20 duration-fast ease-standard flex size-11 items-center justify-center rounded-full border text-neutral-400 transition-colors hover:border-white/30 hover:bg-white/5 hover:text-white"
                       >
                         <Icon className="size-4" />
                       </m.a>
@@ -167,7 +167,7 @@ export function Footer({
       <div className="border-t border-white/10">
         <Container size="lg">
           <div className="flex flex-col items-center justify-between gap-4 py-6 sm:flex-row">
-            <Text variant="caption" className="text-neutral-500">
+            <Text variant="caption" className="text-neutral-400">
               &copy; {year} {siteConfig.name}. All Rights Reserved.
             </Text>
             {legalLinks.length > 0 ? (
@@ -176,7 +176,7 @@ export function Footer({
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="duration-fast ease-standard text-xs text-neutral-500 transition-colors hover:text-white"
+                      className="duration-fast ease-standard text-xs text-neutral-400 transition-colors hover:text-white"
                     >
                       {link.label}
                     </Link>

@@ -26,7 +26,9 @@
 
   /* Neutral / UI */
   --muted: #f4f4f5;
-  --muted-foreground: #71717a;
+  /* zinc-600, not zinc-500: zinc-500 is 4.4:1 on --muted, just under the
+     4.5:1 AA minimum for normal-size text. */
+  --muted-foreground: #52525b;
   --border: #e4e4e7;
   --input: #e4e4e7;
   --ring: #4338ca;
