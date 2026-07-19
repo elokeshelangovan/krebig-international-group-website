@@ -44,7 +44,6 @@ const defaultDetails: OfficeDetail[] = [
     icon: Phone,
     label: "Phone",
     lines: ["+971 XX XXX XXXX"],
-    href: "tel:+971XXXXXXXXX",
   },
 ];
 
