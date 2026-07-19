@@ -54,6 +54,13 @@ export default function Image() {
         </div>
       </div>
     </div>,
-    { ...size },
+    {
+      ...size,
+      // This route's default `Cache-Control` is `max-age=0, must-revalidate`
+      // (hardcoded by next/og for all ImageResponse routes). The image is
+      // static build output, so cache it for a day while still picking up
+      // content changes within a day of the next deploy.
+      headers: { "cache-control": "public, max-age=86400, must-revalidate" },
+    },
   );
 }
