@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent, type ReactNode } from "react";
+import { useEffect, useRef, useState, type FormEvent, type ReactNode } from "react";
 import { CheckCircle2 } from "lucide-react";
 import { m, useReducedMotion } from "framer-motion";
 import { Section } from "@/components/layout/section";
@@ -149,6 +149,16 @@ export function ContactForm({
   const [values, setValues] = useState<FormValues>(initialValues);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const confirmationHeadingRef = useRef<HTMLHeadingElement>(null);
+  const fieldOrder: (keyof FormValues)[] = [
+    "fullName",
+    "email",
+    "phone",
+    "industry",
+    "inquiryType",
+    "subject",
+    "message",
+  ];
 
   function updateField<K extends keyof FormValues>(field: K, value: FormValues[K]) {
     setValues((prev) => ({ ...prev, [field]: value }));
@@ -160,6 +170,13 @@ export function ContactForm({
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length === 0) {
       setSubmitted(true);
+    } else {
+      const firstInvalidField = fieldOrder.find((field) => nextErrors[field]);
+      if (firstInvalidField) {
+        const el = event.currentTarget.elements.namedItem(firstInvalidField) as
+          HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | null;
+        el?.focus();
+      }
     }
   }
 
@@ -168,6 +185,15 @@ export function ContactForm({
     setErrors({});
     setSubmitted(false);
   }
+
+  // Moves focus to the confirmation so keyboard/screen-reader users notice
+  // the form was replaced by the success state; `role="status"` on the
+  // panel itself covers users who don't move focus at all.
+  useEffect(() => {
+    if (submitted) {
+      confirmationHeadingRef.current?.focus();
+    }
+  }, [submitted]);
 
   return (
     <Section
@@ -210,6 +236,7 @@ export function ContactForm({
         <Card className="p-8 sm:p-10">
           {submitted ? (
             <m.div
+              role="status"
               className="flex flex-col items-center gap-4 py-8 text-center"
               initial={shouldReduceMotion ? undefined : { opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
@@ -221,7 +248,12 @@ export function ContactForm({
               >
                 <CheckCircle2 className="size-7" strokeWidth={1.75} />
               </span>
-              <Heading level={3} className="text-xl">
+              <Heading
+                ref={confirmationHeadingRef}
+                level={3}
+                tabIndex={-1}
+                className="text-xl outline-none"
+              >
                 Message Sent
               </Heading>
               <Text variant="body" className="text-muted-foreground max-w-md text-pretty">
@@ -241,6 +273,7 @@ export function ContactForm({
                     name="fullName"
                     type="text"
                     autoComplete="name"
+                    required
                     value={values.fullName}
                     onChange={(e) => updateField("fullName", e.target.value)}
                     aria-invalid={Boolean(errors.fullName)}
@@ -268,6 +301,7 @@ export function ContactForm({
                     name="email"
                     type="email"
                     autoComplete="email"
+                    required
                     value={values.email}
                     onChange={(e) => updateField("email", e.target.value)}
                     aria-invalid={Boolean(errors.email)}
@@ -281,6 +315,7 @@ export function ContactForm({
                     name="phone"
                     type="tel"
                     autoComplete="tel"
+                    required
                     value={values.phone}
                     onChange={(e) => updateField("phone", e.target.value)}
                     aria-invalid={Boolean(errors.phone)}
@@ -296,6 +331,7 @@ export function ContactForm({
                     id="industry"
                     name="industry"
                     type="text"
+                    required
                     value={values.industry}
                     onChange={(e) => updateField("industry", e.target.value)}
                     aria-invalid={Boolean(errors.industry)}
@@ -307,6 +343,7 @@ export function ContactForm({
                   <select
                     id="inquiryType"
                     name="inquiryType"
+                    required
                     value={values.inquiryType}
                     onChange={(e) => updateField("inquiryType", e.target.value)}
                     aria-invalid={Boolean(errors.inquiryType)}
@@ -330,6 +367,7 @@ export function ContactForm({
                   id="subject"
                   name="subject"
                   type="text"
+                  required
                   value={values.subject}
                   onChange={(e) => updateField("subject", e.target.value)}
                   aria-invalid={Boolean(errors.subject)}
@@ -343,6 +381,7 @@ export function ContactForm({
                   id="message"
                   name="message"
                   rows={5}
+                  required
                   value={values.message}
                   onChange={(e) => updateField("message", e.target.value)}
                   aria-invalid={Boolean(errors.message)}

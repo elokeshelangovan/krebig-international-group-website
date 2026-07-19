@@ -215,7 +215,9 @@ export function Careers({
                 </CardHeader>
                 <CardFooter>
                   <Button asChild variant="outline" size="sm">
-                    <Link href={role.href}>View Position</Link>
+                    <Link href={role.href} aria-label={`View position: ${role.title}`}>
+                      View Position
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

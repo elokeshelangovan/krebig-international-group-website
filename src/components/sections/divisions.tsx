@@ -137,7 +137,9 @@ export function Divisions({
                 </CardHeader>
                 <CardFooter>
                   <Button asChild variant="outline" size="sm">
-                    <Link href={division.href}>Learn More</Link>
+                    <Link href={division.href} aria-label={`Learn more about ${division.name}`}>
+                      Learn More
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

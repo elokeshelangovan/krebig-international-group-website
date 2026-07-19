@@ -152,7 +152,7 @@ export function OfficeInformation({
                         aria-label={social.label}
                         whileHover={shouldReduceMotion ? undefined : { y: -3 }}
                         transition={{ type: "spring", stiffness: 300, damping: 24 }}
-                        className="border-border text-muted-foreground hover:border-primary/30 hover:bg-accent hover:text-primary duration-fast ease-standard flex size-9 items-center justify-center rounded-full border transition-colors"
+                        className="border-border text-muted-foreground hover:border-primary/30 hover:bg-accent hover:text-primary duration-fast ease-standard flex size-11 items-center justify-center rounded-full border transition-colors"
                       >
                         <Icon className="size-4" />
                       </m.a>

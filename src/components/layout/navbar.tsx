@@ -55,14 +55,18 @@ function NavLink({
 
 function Logo({ label }: { label: React.ReactNode }) {
   return (
-    <Link href="/" className="flex items-center gap-2.5">
+    // The site name text is hidden below the `xs` breakpoint, which would
+    // otherwise leave this link with no accessible name at narrow widths.
+    <Link href="/" aria-label={siteConfig.name} className="flex items-center gap-2.5">
       <span
         aria-hidden="true"
         className="bg-primary text-primary-foreground flex size-8 shrink-0 items-center justify-center rounded-md text-sm font-bold"
       >
         {siteConfig.shortName.charAt(0)}
       </span>
-      <span className="xs:inline hidden text-base font-semibold tracking-tight">{label}</span>
+      <span aria-hidden="true" className="xs:inline hidden text-base font-semibold tracking-tight">
+        {label}
+      </span>
     </Link>
   );
 }

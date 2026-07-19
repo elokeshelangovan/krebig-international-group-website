@@ -108,7 +108,9 @@ export function OpenOpportunities({
                 </CardHeader>
                 <CardFooter>
                   <Button asChild size="sm">
-                    <Link href={position.href}>Apply Now</Link>
+                    <Link href={position.href} aria-label={`Apply now for ${position.title}`}>
+                      Apply Now
+                    </Link>
                   </Button>
                 </CardFooter>
               </Card>

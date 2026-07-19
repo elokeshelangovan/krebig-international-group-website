@@ -19,7 +19,8 @@ export const buttonVariants = cva(
         sm: "h-9 px-3 text-sm",
         md: "h-10 px-4",
         lg: "h-11 px-6 text-base",
-        icon: "size-10",
+        // 44px meets the minimum touch-target size for icon-only controls.
+        icon: "size-11",
       },
     },
     defaultVariants: {
