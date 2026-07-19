@@ -43,7 +43,7 @@ function NavLink({
       rel={item.external ? "noopener noreferrer" : undefined}
       aria-current={isActive ? "page" : undefined}
       className={cn(
-        "duration-fast ease-standard text-sm font-medium transition-colors",
+        "duration-fast ease-standard text-sm font-medium whitespace-nowrap transition-colors",
         isActive ? "text-foreground" : "text-foreground/70 hover:text-foreground",
         className,
       )}
@@ -57,6 +57,9 @@ function Logo({ label }: { label: React.ReactNode }) {
   return (
     // The site name text is hidden below the `xs` breakpoint, which would
     // otherwise leave this link with no accessible name at narrow widths.
+    // Between `xs` and `xl` the full name is replaced with the short name:
+    // at the `lg` breakpoint (1024px) there isn't enough room for the full
+    // primary nav plus "KREBIG International Group" on one line.
     <Link href="/" aria-label={siteConfig.name} className="flex items-center gap-2.5">
       <span
         aria-hidden="true"
@@ -64,7 +67,16 @@ function Logo({ label }: { label: React.ReactNode }) {
       >
         {siteConfig.shortName.charAt(0)}
       </span>
-      <span aria-hidden="true" className="xs:inline hidden text-base font-semibold tracking-tight">
+      <span
+        aria-hidden="true"
+        className="xs:inline hidden text-base font-semibold tracking-tight whitespace-nowrap xl:hidden"
+      >
+        {siteConfig.shortName}
+      </span>
+      <span
+        aria-hidden="true"
+        className="hidden text-base font-semibold tracking-tight whitespace-nowrap xl:inline"
+      >
         {label}
       </span>
     </Link>
@@ -145,10 +157,10 @@ export function Navbar({
         <div className="flex h-16 items-center justify-between">
           <Logo label={logo} />
 
-          <nav aria-label="Primary" className="hidden items-center gap-8 lg:flex">
+          <nav aria-label="Primary" className="hidden items-center gap-4 lg:flex xl:gap-8">
             <ul
               onMouseLeave={() => setHoveredHref(null)}
-              className="flex items-center gap-6 xl:gap-8"
+              className="flex items-center gap-3 xl:gap-8"
             >
               {items.map((item) => {
                 const isActive = isItemActive(pathname, item.href);
